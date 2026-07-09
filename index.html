@@ -210,6 +210,15 @@
     flex-shrink:0;width:18px;
   }
 
+  /* ===== Peluang & Manfaat (highlight section + stat cards) ===== */
+  .section-highlight{background:var(--accent-tint);}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media (max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.stat-grid{grid-template-columns:1fr;}}
+  .stat-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:24px 22px;}
+  .stat-num{font-size:34px;font-weight:800;color:var(--accent-deep);letter-spacing:-0.03em;line-height:1;margin-bottom:10px;}
+  .stat-label{font-size:13px;color:var(--ink-soft);line-height:1.5;}
+
   /* ===== Cards ===== */
   .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
   @media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr);}}
@@ -435,23 +444,24 @@
   <div class="wrap">
     <div class="toc-head">
       <h2>Daftar isi</h2>
-      <p>14 bagian — lompat ke yang Anda perlukan.</p>
+      <p>15 bagian — lompat ke yang Anda perlukan.</p>
     </div>
     <div class="toc-grid">
       <a class="toc-item" href="#untuk-siapa"><span class="toc-num">01</span> Untuk Siapa</a>
-      <a class="toc-item" href="#cara"><span class="toc-num">02</span> Cara Mengajukan</a>
-      <a class="toc-item" href="#video"><span class="toc-num">03</span> Video Panduan</a>
-      <a class="toc-item" href="#timeline"><span class="toc-num">04</span> Timeline</a>
-      <a class="toc-item" href="#cakupan"><span class="toc-num">05</span> Jalur Layak / Task Force</a>
-      <a class="toc-item" href="#isi-proposal"><span class="toc-num">06</span> Isi Proposal</a>
-      <a class="toc-item" href="#tips"><span class="toc-num">07</span> Tips &amp; Trik</a>
-      <a class="toc-item" href="#tim"><span class="toc-num">08</span> Tim &amp; Mitra</a>
-      <a class="toc-item" href="#danaan"><span class="toc-num">09</span> Pendanaan</a>
-      <a class="toc-item" href="#luaran"><span class="toc-num">10</span> Luaran Wajib</a>
-      <a class="toc-item" href="#pelaporan"><span class="toc-num">11</span> Pelaporan &amp; Monev</a>
-      <a class="toc-item" href="#cek"><span class="toc-num">12</span> Cek Kelayakan</a>
-      <a class="toc-item" href="#faq"><span class="toc-num">13</span> FAQ</a>
-      <a class="toc-item" href="#panduan-pdf"><span class="toc-num">14</span> Kontak</a>
+      <a class="toc-item" href="#peluang"><span class="toc-num">02</span> Peluang &amp; Manfaat</a>
+      <a class="toc-item" href="#cara"><span class="toc-num">03</span> Cara Mengajukan</a>
+      <a class="toc-item" href="#video"><span class="toc-num">04</span> Video Panduan</a>
+      <a class="toc-item" href="#timeline"><span class="toc-num">05</span> Timeline</a>
+      <a class="toc-item" href="#cakupan"><span class="toc-num">06</span> Jalur Layak / Task Force</a>
+      <a class="toc-item" href="#isi-proposal"><span class="toc-num">07</span> Isi Proposal</a>
+      <a class="toc-item" href="#tips"><span class="toc-num">08</span> Tips &amp; Trik</a>
+      <a class="toc-item" href="#tim"><span class="toc-num">09</span> Tim &amp; Mitra</a>
+      <a class="toc-item" href="#danaan"><span class="toc-num">10</span> Pendanaan</a>
+      <a class="toc-item" href="#luaran"><span class="toc-num">11</span> Luaran Wajib</a>
+      <a class="toc-item" href="#pelaporan"><span class="toc-num">12</span> Pelaporan &amp; Monev</a>
+      <a class="toc-item" href="#cek"><span class="toc-num">13</span> Cek Kelayakan</a>
+      <a class="toc-item" href="#faq"><span class="toc-num">14</span> FAQ</a>
+      <a class="toc-item" href="#panduan-pdf"><span class="toc-num">15</span> Kontak</a>
     </div>
   </div>
 </section>
@@ -484,6 +494,46 @@
         <h3>Susun proposal lanjutan</h3>
         <p>Dokumen yang disusun sekarang adalah proposal penelitian lanjutan (format Lampiran 7), bukan usulan produk/komoditas awal.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-highlight" id="peluang">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Peluang &amp; Manfaat</div>
+      <h2>Ini bukan sekadar administrasi — ini pendanaan riil</h2>
+      <p>Skala Hilirisasi Riset nasional 2026, dan apa yang benar-benar Anda dapatkan kalau lolos.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">Rp1,7 T</div>
+        <div class="stat-label">total pendanaan riset &amp; hilirisasi Kemdiktisaintek tahun 2026, untuk 18.215 kegiatan di seluruh Indonesia.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">37%</div>
+        <div class="stat-label">tingkat keberhasilan proposal Hilirisasi Riset Prioritas nasional 2026 — 925 dari 2.488 usulan didanai, senilai Rp318 miliar.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">60%</div>
+        <div class="stat-label">penerima pendanaan riset nasional 2026 berasal dari PT <b>swasta</b>, bukan PTN — kabar baik untuk BINUS.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">25%</div>
+        <div class="stat-label">dari total dana boleh langsung jadi honorarium tim peneliti — bukan cuma habis untuk operasional.</div>
+      </div>
+    </div>
+
+    <div class="scope-box" style="margin-top:18px;">
+      <h3>Yang Anda dapatkan kalau lolos</h3>
+      <ul>
+        <li><b>Dana hingga Rp1,2–2 miliar per proposal</b> (tergantung jalur Prioritas/Strategis — lihat <a href="#danaan">Pendanaan</a>), di luar kontribusi mitra.</li>
+        <li><b>Honorarium resmi untuk tim</b> — bisa dianggarkan langsung di RAB, bukan cuma reimbursement biaya.</li>
+        <li><b>Rekam jejak yang diakui negara</b> — HKI, purwarupa, dan publikasi berstatus didanai Kemdiktisaintek/LPDP, modal kuat untuk pengajuan hibah berikutnya.</li>
+        <li><b>Validasi industri nyata</b> — mitra yang sudah terlibat sejak Pra-Studi Kelayakan, bukan mencari mitra dari nol.</li>
+      </ul>
+      <p style="font-size:12px;color:var(--ink-faint);margin-top:14px;">Sumber: Kemdiktisaintek — pengumuman penerima pendanaan (9 Apr 2026) &amp; penandatanganan kontrak TA 2026 (20 Apr 2026). Angka nasional lintas skema Hilirisasi Riset Prioritas (termasuk Dorongan Teknologi), bukan angka khusus satu sub-skema.</p>
     </div>
   </div>
 </section>
@@ -969,7 +1019,7 @@
       </div>
     </div>
 
-    <div class="isi-block warn-block"><b>Perlu dikonfirmasi:</b> Laporan Akhir wajib memuat kontribusi terhadap "8 Industri Strategis" — istilah ini disebut di Lampiran 11 tapi tidak dijelaskan di Panduan Teknis 2026. Kemungkinan definisinya ada di dokumen kebijakan lain — <b>ISI:</b> Tommy, mohon dikonfirmasi ke DHK sebelum poin ini disampaikan ke dosen sebagai definisi resmi.</div>
+    <div class="isi-block warn-block"><b>Kemungkinan definisi (perlu konfirmasi):</b> Laporan Akhir wajib memuat kontribusi terhadap "8 Industri Strategis" — istilah ini disebut di Lampiran 11 tapi tidak dijelaskan di Panduan Teknis 2026 itu sendiri. Kemdiktisaintek secara terpisah menyebut 8 sektor ini sebagai: Kesehatan, Ketahanan Pangan, Digitalisasi (AI &amp; semikonduktor), Hilirisasi &amp; Industrialisasi, Energi, Material Maju &amp; Manufaktur, Maritim, dan Pertahanan. <b>ISI:</b> Tommy, mohon dikonfirmasi ke DHK bahwa daftar ini sama dengan yang dimaksud Lampiran 11, sebelum disampaikan ke dosen sebagai definisi resmi.</div>
   </div>
 </section>
 
