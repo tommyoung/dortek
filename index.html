@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dorongan Teknologi 2026 — Proposal Penuh | BINUS RTT</title>
+<title>Dorongan Teknologi 2026, Usulan Produk/Teknologi | BINUS RTT</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -159,7 +159,7 @@
   .tag.funder{background:rgba(30,134,200,.16);color:#7FC4EE;}
   .tag.isi{background:rgba(232,149,42,.14);color:var(--accent);}
 
-  /* deadline dashboard — glass card, sits inside hero */
+  /* deadline dashboard: glass card, sits inside hero */
   .deadline-panel{
     position:relative;
     max-width:920px;margin:32px auto 0;
@@ -209,15 +209,6 @@
     font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;font-weight:600;color:var(--accent-deep);
     flex-shrink:0;width:18px;
   }
-
-  /* ===== Peluang & Manfaat (highlight section + stat cards) ===== */
-  .section-highlight{background:var(--accent-tint);}
-  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-  @media (max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:560px){.stat-grid{grid-template-columns:1fr;}}
-  .stat-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:24px 22px;}
-  .stat-num{font-size:34px;font-weight:800;color:var(--accent-deep);letter-spacing:-0.03em;line-height:1;margin-bottom:10px;}
-  .stat-label{font-size:13px;color:var(--ink-soft);line-height:1.5;}
 
   /* ===== Cards ===== */
   .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
@@ -378,11 +369,38 @@
     html{scroll-behavior:auto;}
     *{transition:none !important;}
   }
+
+  /* ===== Stage tracker (added) ===== */
+  .stage-track{display:flex;border-radius:16px;overflow:hidden;margin:20px 0;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:600;text-align:center;gap:2px;}
+  .stage-track div{padding:16px 8px;flex:1;}
+  .stage-now{background:var(--accent-tint);color:var(--accent-deep);}
+  .stage-later{background:var(--bg-alt);color:var(--ink-soft);}
+  @media (max-width:700px){.stage-track{flex-direction:column;}}
+
+  .later-flag{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--bg-alt);color:var(--ink-soft);
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.03em;padding:5px 11px;border-radius:100px;margin-bottom:14px;
+  }
+  .later-flag::before{content:"●";color:var(--ink-faint);}
+
+  .now-flag{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--good-tint);color:var(--good);
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;font-weight:600;
+    text-transform:uppercase;letter-spacing:.03em;padding:5px 11px;border-radius:100px;margin-bottom:14px;
+  }
+  .now-flag::before{content:"●";}
+
+  .tl-item.tl-mini{padding:11px 0;}
+  .tl-item.tl-mini .tl-title{font-size:13.5px;}
+  .tl-item.tl-mini .tl-desc{font-size:12.5px;}
 </style>
 </head>
 <body>
 
-<div class="banner">🔒 <b>BINUSIAN ONLY</b> — Panduan Skema Dorongan Teknologi (Hiliriset) 2026, dokumen internal RTT. Mohon tidak dibagikan ke luar BINUS.</div>
+<div class="banner">🔒 <b>BINUSIAN ONLY</b>, Panduan Skema Dorongan Teknologi (Hiliriset) 2026, dokumen internal RTT. Mohon tidak dibagikan ke luar BINUS.</div>
 
 <nav>
   <div class="navwrap">
@@ -401,10 +419,10 @@
 
 <header class="hero" id="top">
   <div class="wrap hero-inner">
-    <div class="scheme-badge">⚙ Skema Dorongan Teknologi — Hiliriset 2026</div>
-    <div class="eyebrow" style="justify-content:center;">Tahap Proposal Penuh, setelah Pra-Studi Kelayakan</div>
-    <h1>Produk Anda sudah <span class="hl">Layak</span>.<br>Sekarang, proposal penuh.</h1>
-    <p class="lede">Halaman ini untuk dosen BINUS yang produknya sudah mendapat rekomendasi <b style="color:#fff;">Layak</b> dari Pra-Studi Kelayakan di skema Dorongan Teknologi. Bukan halaman pendaftaran produk baru — kalau belum sampai tahap ini, cek dulu <a href="#untuk-siapa" style="color:#FFC988;">Untuk Siapa</a> di bawah.</p>
+    <div class="scheme-badge">⚙ Skema Dorongan Teknologi, Hiliriset 2026</div>
+    <div class="eyebrow" style="justify-content:center;">Tahap sekarang: Penerimaan Usulan Produk atau Teknologi</div>
+    <h1>Sudah punya teknologi TKT 6-8 tanpa mitra?<br><span class="hl">Ajukan usulan sekarang.</span></h1>
+    <p class="lede">Halaman ini untuk dosen BINUS yang produk risetnya sudah mencapai TKT 6-8, sudah tervalidasi teknis, dan <b style="color:#fff;">belum</b> punya mitra hilirisasi resmi. Ini tahap pertama skema Dorongan Teknologi 2026: mengusulkan produk ke Kemdiktisaintek. Kalau produk Anda sudah punya mitra resmi atau sudah dinyatakan Layak dari Pra-Studi Kelayakan, tahapnya berbeda, cek <a href="#untuk-siapa" style="color:#FFC988;">Untuk Siapa</a> di bawah.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://hiliriset.kemdiktisaintek.go.id" target="_blank" rel="noopener">Buka Sistem HILIRISET ↗</a>
       <a class="btn btn-secondary" href="https://hiliriset.kemdiktisaintek.go.id/guide/dorongan-teknologi" target="_blank" rel="noopener">Unduh Panduan Teknis 2026 ↗</a>
@@ -428,12 +446,12 @@
             <div class="cd-block"><div class="cd-num" id="cd-m">--</div><div class="cd-unit">Menit</div></div>
             <div class="cd-block"><div class="cd-num" id="cd-s">--</div><div class="cd-unit">Detik</div></div>
           </div>
-          <p class="dp-note">Batas non-negotiable untuk unggah proposal lengkap ke sistem HILIRISET.</p>
+          <p class="dp-note">Batas mengunggah Usulan Produk atau Teknologi (Lampiran 1 dan 2) ke sistem HILIRISET. Panduan Teknis 2026 sendiri tidak mencantumkan tanggal kalender untuk tahap ini, tanggal ini dari pengumuman resmi terpisah (poster Hiliriset). Kurun waktunya sejalan dengan slide linimasa resmi: "Minggu ke-2 Juli, Sosialisasi dan penerimaan usulan Produk/Teknologi."</p>
         </div>
         <div class="dp-cell is-internal">
           <div class="dp-label">Batas Internal RTT · Jangan lewat ini</div>
           <div class="dp-date">16 Juli 2026</div>
-          <p class="dp-note">Kirim proposal ke RTT paling lambat tanggal ini, supaya masih sempat dicek substansinya, dikonsultasikan, dan diproses tanda tangan pimpinan sebelum naik ke sistem HILIRISET.</p>
+          <p class="dp-note">Kirim draft Lampiran 1 dan 2 ke RTT paling lambat tanggal ini, supaya masih sempat dicek substansinya, dikonsultasikan, dan diproses persetujuan pimpinan sebelum naik ke sistem HILIRISET.</p>
         </div>
       </div>
     </div>
@@ -444,24 +462,23 @@
   <div class="wrap">
     <div class="toc-head">
       <h2>Daftar isi</h2>
-      <p>15 bagian — lompat ke yang Anda perlukan.</p>
+      <p>14 bagian, lompat ke yang Anda perlukan.</p>
     </div>
     <div class="toc-grid">
       <a class="toc-item" href="#untuk-siapa"><span class="toc-num">01</span> Untuk Siapa</a>
-      <a class="toc-item" href="#peluang"><span class="toc-num">02</span> Peluang &amp; Manfaat</a>
-      <a class="toc-item" href="#cara"><span class="toc-num">03</span> Cara Mengajukan</a>
-      <a class="toc-item" href="#video"><span class="toc-num">04</span> Video Panduan</a>
-      <a class="toc-item" href="#timeline"><span class="toc-num">05</span> Timeline</a>
-      <a class="toc-item" href="#cakupan"><span class="toc-num">06</span> Jalur Layak / Task Force</a>
-      <a class="toc-item" href="#isi-proposal"><span class="toc-num">07</span> Isi Proposal</a>
-      <a class="toc-item" href="#tips"><span class="toc-num">08</span> Tips &amp; Trik</a>
-      <a class="toc-item" href="#tim"><span class="toc-num">09</span> Tim &amp; Mitra</a>
-      <a class="toc-item" href="#danaan"><span class="toc-num">10</span> Pendanaan</a>
-      <a class="toc-item" href="#luaran"><span class="toc-num">11</span> Luaran Wajib</a>
-      <a class="toc-item" href="#pelaporan"><span class="toc-num">12</span> Pelaporan &amp; Monev</a>
-      <a class="toc-item" href="#cek"><span class="toc-num">13</span> Cek Kelayakan</a>
-      <a class="toc-item" href="#faq"><span class="toc-num">14</span> FAQ</a>
-      <a class="toc-item" href="#panduan-pdf"><span class="toc-num">15</span> Kontak</a>
+      <a class="toc-item" href="#cara"><span class="toc-num">02</span> Cara Mengajukan Sekarang</a>
+      <a class="toc-item" href="#video"><span class="toc-num">03</span> Video Panduan</a>
+      <a class="toc-item" href="#timeline"><span class="toc-num">04</span> Timeline Lengkap</a>
+      <a class="toc-item" href="#cakupan"><span class="toc-num">05</span> Setelah Terpilih: Pra-Studi Kelayakan</a>
+      <a class="toc-item" href="#isi-proposal"><span class="toc-num">06</span> Isi Usulan Sekarang</a>
+      <a class="toc-item" href="#tips"><span class="toc-num">07</span> Tips &amp; Trik</a>
+      <a class="toc-item" href="#tim"><span class="toc-num">08</span> Ketua, Tim &amp; Mitra</a>
+      <a class="toc-item" href="#danaan"><span class="toc-num">09</span> Pendanaan (Tahap Lanjutan)</a>
+      <a class="toc-item" href="#luaran"><span class="toc-num">10</span> Luaran Wajib (Tahap Lanjutan)</a>
+      <a class="toc-item" href="#pelaporan"><span class="toc-num">11</span> Pelaporan &amp; Monev</a>
+      <a class="toc-item" href="#cek"><span class="toc-num">12</span> Cek Kelayakan</a>
+      <a class="toc-item" href="#faq"><span class="toc-num">13</span> FAQ</a>
+      <a class="toc-item" href="#panduan-pdf"><span class="toc-num">14</span> Kontak</a>
     </div>
   </div>
 </section>
@@ -471,70 +488,36 @@
     <div class="section-head">
       <div class="eyebrow">Untuk Siapa Halaman Ini</div>
       <h2>Sebelum lanjut, pastikan empat hal ini sudah beres</h2>
-      <p>Jika salah satu belum terpenuhi, kemungkinan Anda belum di tahap ini — lihat <a href="#cek">Cek Kelayakan</a> di bawah.</p>
+      <p>Ini adalah tahap paling awal skema Dorongan Teknologi, sebelum Pra-Studi Kelayakan. Jika salah satu poin berikut belum terpenuhi, cek dulu ke RTT sebelum menyusun usulan, lihat juga <a href="#cek">Cek Kelayakan</a> di bawah.</p>
     </div>
     <div class="cards">
       <div class="card">
         <div class="num">01</div>
-        <h3>Rekomendasi "Layak"</h3>
-        <p>Produk Anda sudah melalui Pra-Studi Kelayakan dan divalidasi reviewer dengan hasil Layak — bukan Belum Layak, bukan Task Force yang belum dievaluasi ulang.</p>
+        <h3>TKT 6-8</h3>
+        <p>Tingkat Kesiapan Teknologi produk berada di rentang 6-8: sudah lewat pengembangan lab dan uji skala terbatas, kinerja stabil di kondisi operasional nyata. TKT di bawah 6 atau sudah TKT 9 tidak masuk skema ini.</p>
       </div>
       <div class="card">
         <div class="num">02</div>
-        <h3>TKT 6–8</h3>
-        <p>Tingkat Kesiapan Teknologi produk berada di rentang 6–8. TKT di bawah 6 atau sudah TKT 9 tidak masuk skema pendanaan tahap ini.</p>
+        <h3>Belum punya mitra hilirisasi</h3>
+        <p>Ini justru syarat, bukan penghalang. Produk yang <b>belum</b> punya mitra DUDI atau pemerintah adalah target utama skema ini. Kalau produk Anda sudah terikat mitra resmi, skema yang lebih sesuai kemungkinan Ajakan Industri atau SINERGI, koordinasikan dengan RTT.</p>
       </div>
       <div class="card">
         <div class="num">03</div>
-        <h3>Sudah ada mitra</h3>
-        <p>Instansi pemerintah minimal setingkat Dinas Kabupaten/Kota, atau mitra DUDI berbadan hukum dengan NIB — bukan lagi tahap mencari mitra.</p>
+        <h3>Sudah tervalidasi teknis</h3>
+        <p>Sudah ada validasi internal dan/atau eksternal dengan bukti performa dan stabilitas, riset orisinal dari tim Anda sendiri, dan tidak sedang/akan diusulkan ke skema pendanaan lain secara bersamaan.</p>
       </div>
       <div class="card">
         <div class="num">04</div>
-        <h3>Susun proposal lanjutan</h3>
-        <p>Dokumen yang disusun sekarang adalah proposal penelitian lanjutan (format Lampiran 7), bukan usulan produk/komoditas awal.</p>
+        <h3>Anda memenuhi syarat Ketua Peneliti</h3>
+        <p>Dosen aktif di PDDIKTI, berpendidikan S3 atau S2 dengan jabatan fungsional minimal Lektor, dan merupakan pemilik sah atau pengembang utama produk yang diusulkan.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section-highlight" id="peluang">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Peluang &amp; Manfaat</div>
-      <h2>Ini bukan sekadar administrasi — ini pendanaan riil</h2>
-      <p>Skala Hilirisasi Riset nasional 2026, dan apa yang benar-benar Anda dapatkan kalau lolos.</p>
+    <div class="stage-track">
+      <div class="stage-now">SEKARANG<br>Usulan Produk/Teknologi</div>
+      <div class="stage-later">NANTI<br>Pra-Studi Kelayakan</div>
+      <div class="stage-later">NANTI<br>Proposal Penelitian Lanjutan</div>
     </div>
-
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-num">Rp1,7 T</div>
-        <div class="stat-label">total pendanaan riset &amp; hilirisasi Kemdiktisaintek tahun 2026, untuk 18.215 kegiatan di seluruh Indonesia.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">37%</div>
-        <div class="stat-label">tingkat keberhasilan proposal Hilirisasi Riset Prioritas nasional 2026 — 925 dari 2.488 usulan didanai, senilai Rp318 miliar.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">60%</div>
-        <div class="stat-label">penerima pendanaan riset nasional 2026 berasal dari PT <b>swasta</b>, bukan PTN — kabar baik untuk BINUS.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">25%</div>
-        <div class="stat-label">dari total dana boleh langsung jadi honorarium tim peneliti — bukan cuma habis untuk operasional.</div>
-      </div>
-    </div>
-
-    <div class="scope-box" style="margin-top:18px;">
-      <h3>Yang Anda dapatkan kalau lolos</h3>
-      <ul>
-        <li><b>Dana hingga Rp1,2–2 miliar per proposal</b> (tergantung jalur Prioritas/Strategis — lihat <a href="#danaan">Pendanaan</a>), di luar kontribusi mitra.</li>
-        <li><b>Honorarium resmi untuk tim</b> — bisa dianggarkan langsung di RAB, bukan cuma reimbursement biaya.</li>
-        <li><b>Rekam jejak yang diakui negara</b> — HKI, purwarupa, dan publikasi berstatus didanai Kemdiktisaintek/LPDP, modal kuat untuk pengajuan hibah berikutnya.</li>
-        <li><b>Validasi industri nyata</b> — mitra yang sudah terlibat sejak Pra-Studi Kelayakan, bukan mencari mitra dari nol.</li>
-      </ul>
-      <p style="font-size:12px;color:var(--ink-faint);margin-top:14px;">Sumber: Kemdiktisaintek — pengumuman penerima pendanaan (9 Apr 2026) &amp; penandatanganan kontrak TA 2026 (20 Apr 2026). Angka nasional lintas skema Hilirisasi Riset Prioritas (termasuk Dorongan Teknologi), bukan angka khusus satu sub-skema.</p>
-    </div>
+    <div class="src-note">Sumber: Panduan Teknis 2026, Bab III.A.3-4</div>
   </div>
 </section>
 
@@ -543,49 +526,49 @@
     <div class="section-head">
       <div class="eyebrow">Cara Mengajukan</div>
       <h2>Enam langkah, dari sekarang sampai proposal terkirim</h2>
-      <p>Langkah bertanda <span class="tag internal" style="color:#5b6a8f;">internal</span> adalah proses BINUS/RTT — langkah bertanda <span class="tag funder" style="color:#146493;">funder</span> adalah proses resmi di sistem HILIRISET milik Kemdiktisaintek.</p>
+      <p>Langkah bertanda <span class="tag internal" style="color:#5b6a8f;">internal</span> adalah proses BINUS/RTT. Langkah bertanda <span class="tag funder" style="color:#146493;">funder</span> adalah proses resmi di sistem HILIRISET milik Kemdiktisaintek.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
         <div>
-          <div class="step-head"><h3>Konfirmasi status &amp; klaster ke RTT</h3><span class="tag internal" style="color:#5b6a8f;">internal</span></div>
-          <p>Pastikan ke RTT bahwa produk Anda berstatus Layak, dan cek apakah Anda masuk <b>Jalur Layak (Tipe 1)</b> atau <b>Task Force (Tipe 2)</b> — dua jalur ini memakai format proposal yang sedikit berbeda.</p>
+          <div class="step-head"><h3>Cek kelayakan produk dengan RTT</h3><span class="tag internal" style="color:#5b6a8f;">internal</span></div>
+          <p>Pastikan TKT produk 6-8, sudah tervalidasi teknis, riset orisinal, tidak sedang diusulkan ke pendanaan lain, dan <b>belum</b> punya mitra hilirisasi resmi. Gunakan <a href="#cek">Cek Kelayakan</a> di bawah sebagai panduan awal.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div>
-          <div class="step-head"><h3>Susun proposal sesuai Lampiran 7</h3><span class="tag funder" style="color:#146493;">funder</span></div>
-          <p>Judul, ringkasan (≤500 kata), kata kunci, pendahuluan (≤1000 kata) yang menindaklanjuti hasil Pra-Studi Kelayakan, peta jalan pengembangan produk (3 milestone berbasis TKT), metode (≤1000 kata), jadwal, dan daftar pustaka. Rincian lengkap di bagian <a href="#isi-proposal">Isi Proposal</a>.</p>
+          <div class="step-head"><h3>Susun Lampiran 1: Proposal Produk atau Teknologi</h3><span class="tag funder" style="color:#146493;">funder</span></div>
+          <p>Nama produk/teknologi, tabel judul penelitian pendukung yang sudah dilakukan sampai TKT 6, aspek teknis (maksimal 300 kata), dan aspek pasar (maksimal 300 kata, termasuk rencana validasi pasar). Rincian lengkap di bagian <a href="#isi-proposal">Isi Usulan Sekarang</a>.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div>
-          <div class="step-head"><h3>Lengkapi dokumen mitra</h3><span class="tag funder" style="color:#146493;">funder</span></div>
-          <p>Lampiran 8 (Surat Pernyataan Dukungan Pendanaan Mitra — kop surat mitra, materai, cap, tanda tangan pimpinan tertinggi) dan Lampiran 9 (Profil Mitra, khusus mitra DUDI, dilampiri scan NIB).</p>
+          <div class="step-head"><h3>Lengkapi Lampiran 2: Surat Pernyataan Orisinalitas</h3><span class="tag funder" style="color:#146493;">funder</span></div>
+          <p>Kop surat perguruan tinggi, ditandatangani Ketua Peneliti dan pimpinan unit pengelola, menyatakan riset orisinal dan tidak sedang atau akan diusulkan ke program pendanaan lain selama periode program berjalan.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div>
-          <div class="step-head"><h3>Review internal RTT</h3><span class="tag internal" style="color:#5b6a8f;">internal</span> <span class="mandatory">Wajib — sebelum 16 Juli</span></div>
-          <p>Kirim draft proposal ke RTT paling lambat <b>16 Juli 2026</b> untuk cek substansi dan konsultasi. RTT perlu waktu menelaah kelengkapan Lampiran 7–9 dan memproses persetujuan/tanda tangan pimpinan sebelum diunggah ke sistem HILIRISET — tahap ini tidak bisa dilakukan di hari yang sama dengan deadline eksternal 19 Juli.</p>
+          <div class="step-head"><h3>Review internal RTT</h3><span class="tag internal" style="color:#5b6a8f;">internal</span> <span class="mandatory">Wajib, sebelum 16 Juli</span></div>
+          <p>Kirim draft Lampiran 1 dan 2 ke RTT paling lambat <b>16 Juli 2026</b> untuk cek substansi dan konsultasi. RTT perlu waktu menelaah kelengkapan dokumen dan memproses persetujuan pimpinan sebelum diunggah ke sistem HILIRISET.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">05</div>
         <div>
           <div class="step-head"><h3>Unggah ke sistem HILIRISET</h3><span class="tag funder" style="color:#146493;">funder</span></div>
-          <p>Unggah proposal lengkap, RAB, dan dokumen mitra melalui <a href="https://hiliriset.kemdiktisaintek.go.id" target="_blank" rel="noopener">hiliriset.kemdiktisaintek.go.id</a> sebelum 19 Juli 2026, pukul 23:59 WIB.</p>
+          <p>Diusulkan secara resmi oleh pimpinan riset dan inovasi perguruan tinggi atau dosen yang ditunjuk, melalui <a href="https://hiliriset.kemdiktisaintek.go.id" target="_blank" rel="noopener">hiliriset.kemdiktisaintek.go.id</a> sebelum 19 Juli 2026, pukul 23:59 WIB. Tidak ada RAB atau dokumen mitra yang diunggah di tahap ini.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">06</div>
         <div>
-          <div class="step-head"><h3>Review anggaran &amp; penetapan</h3><span class="tag funder" style="color:#146493;">funder</span></div>
-          <p>Direktorat Hilirisasi dan Kemitraan (DHK) mereview anggaran yang diusulkan dan menetapkan penerima pendanaan. Tanggal pasti belum diumumkan dalam Panduan Teknis — akan diinfokan lewat sistem HILIRISET.</p>
+          <div class="step-head"><h3>Tunggu hasil seleksi DHK</h3><span class="tag funder" style="color:#146493;">funder</span> <span class="tag internal" style="color:#5b6a8f;">nanti</span></div>
+          <p>Direktorat Hilirisasi dan Kemitraan menyeleksi usulan yang masuk. Produk terpilih masuk "etalase" dan lanjut ke perekrutan Tim Pakar untuk Pra-Studi Kelayakan, perkiraan minggu ke-2 Agustus 2026 menurut linimasa resmi, lihat <a href="#timeline">Timeline Lengkap</a>.</p>
         </div>
       </div>
     </div>
@@ -597,7 +580,7 @@
     <div class="section-head">
       <div class="eyebrow">Video Panduan</div>
       <h2>Video resmi Kemdiktisaintek / Ditjen Risbang</h2>
-      <p>Tonton sebelum menyusun proposal — video 1–2 menjelaskan skema Dorongan Teknologi, video 3 mendemonstrasikan cara isi aplikasi HILIRISET langkah demi langkah.</p>
+      <p>Tonton sebelum menyusun usulan. Video 1-2 menjelaskan skema Dorongan Teknologi secara umum, video 3 mendemonstrasikan cara isi aplikasi HILIRISET langkah demi langkah.</p>
     </div>
     <div class="video-grid">
       <div class="video-card">
@@ -608,14 +591,14 @@
         </div>
       </div>
       <div class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/8I-sVGIDkTU" title="Pengenalan Hiliriset — Skema Dorong Teknologi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/8I-sVGIDkTU" title="Pengenalan Hiliriset, Skema Dorong Teknologi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
         <div class="video-meta">
           <h3>Pengenalan Skema Dorongan Teknologi</h3>
           <p>Penjelasan skema, kriteria TKT, dan alur pendanaan khusus untuk jalur Dorongan Teknologi.</p>
         </div>
       </div>
       <div class="video-card">
-        <div class="video-embed"><iframe src="https://www.youtube.com/embed/vN8f1wSnPN8" title="Tutorial Aplikasi Hiliriset — Skema Dorong Teknologi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video-embed"><iframe src="https://www.youtube.com/embed/vN8f1wSnPN8" title="Tutorial Aplikasi Hiliriset, Skema Dorong Teknologi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
         <div class="video-meta">
           <h3>Tutorial Aplikasi HILIRISET</h3>
           <p>Demo langkah-langkah pengisian di sistem HILIRISET untuk skema Dorongan Teknologi.</p>
@@ -630,127 +613,218 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Timeline</div>
-      <h2>Tanggal-tanggal penting</h2>
+      <h2>Seluruh alur skema, dari usulan sampai pengumuman</h2>
+      <p>Panduan Teknis 2026 tidak mencantumkan tanggal kalender untuk setiap tahap, hanya urutan tahapannya (Bab III). Tanggal per minggu di bawah berasal dari slide linimasa resmi Kemdiktisaintek/Ditjen Risbang yang dibagikan saat sosialisasi, bukan dari dokumen Panduan Teknis tertulis. Anggap sebagai perkiraan, bukan kepastian penuh, dan konfirmasi ulang ke RTT jika ada pembaruan.</p>
     </div>
     <div class="tl">
       <div class="tl-item now">
-        <div class="tl-date">Sekarang<span class="now-badge">Berjalan</span></div>
+        <div class="tl-date">Mgg ke-2 Jul<span class="now-badge">Sekarang</span></div>
         <div>
-          <div class="tl-title">Penyusunan proposal &amp; dokumen mitra</div>
-          <div class="tl-desc">Tim peneliti menyusun Lampiran 7, 8, dan 9 bersama mitra.</div>
+          <div class="tl-title">Sosialisasi &amp; penerimaan usulan Produk/Teknologi</div>
+          <div class="tl-desc">Tahap Anda sekarang. Susun dan unggah Lampiran 1 dan 2. Batas praktis 19 Juli 2026, 23:59 WIB menurut poster resmi terpisah.</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-date mono">16 Jul 2026</div>
+        <div class="tl-date mono">Mgg ke-2 Agu</div>
         <div>
-          <div class="tl-title">Batas internal RTT</div>
-          <div class="tl-desc">Batas akhir kirim draft ke RTT untuk cek substansi, konsultasi, dan persetujuan/tanda tangan pimpinan — sebelum unggah ke sistem HILIRISET.</div>
+          <div class="tl-title">Penetapan Produk/Teknologi terpilih</div>
+          <div class="tl-desc">Direktorat Hilirisasi dan Kemitraan (DHK) menyeleksi usulan yang masuk. Anda tidak perlu mengunggah apa pun di tahap ini.</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-date mono">19 Jul 2026<br>23:59 WIB</div>
+        <div class="tl-date mono">Mgg ke-2 Agu</div>
         <div>
-          <div class="tl-title">Batas akhir Kemdiktisaintek</div>
-          <div class="tl-desc">Batas non-negotiable untuk unggah proposal lengkap ke sistem HILIRISET.</div>
+          <div class="tl-title">Sosialisasi &amp; penerimaan usulan Tim Pakar</div>
+          <div class="tl-desc">Kemdiktisaintek membuka pendaftaran Tim Pakar Pra-Studi Kelayakan (5 orang: 1 ketua, 4 anggota). Ini bukan tim Anda, proses paralel dari sisi pengkaji.</div>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">TBD</div>
+        <div class="tl-date mono">Mgg ke-1 Sep</div>
         <div>
-          <div class="tl-title">Review anggaran &amp; penetapan pendanaan</div>
-          <div class="tl-desc">Dilakukan oleh Direktorat Hilirisasi dan Kemitraan. Tanggal belum diumumkan resmi.</div>
+          <div class="tl-title">Penetapan Tim Pakar</div>
+          <div class="tl-desc">Tim Pakar yang akan mengkaji produk terpilih ditetapkan.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Mgg ke-2 Sep</div>
+        <div>
+          <div class="tl-title">Kontrak Pelaksanaan Pra-Studi Kelayakan</div>
+          <div class="tl-desc">Kontrak kerja Tim Pakar ditandatangani.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Sep-Des</div>
+        <div>
+          <div class="tl-title">Pelaksanaan Pra-Studi Kelayakan</div>
+          <div class="tl-desc">Tim Pakar mengkaji tujuh aspek produk Anda bersama Anda sebagai peneliti pemilik produk. Anda tetap dilibatkan aktif selama proses ini.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Mgg ke-1 Nov</div>
+        <div>
+          <div class="tl-title">Laporan Kemajuan Pra-Studi Kelayakan</div>
+          <div class="tl-desc">Disusun Tim Pakar (Lampiran 5), bukan dokumen yang Anda buat sendiri.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Mgg ke-2 Nov</div>
+        <div>
+          <div class="tl-title">Monitoring dan Evaluasi</div>
+          <div class="tl-desc">Reviewer yang ditunjuk DHK mengevaluasi pelaksanaan Pra-Studi Kelayakan.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Mgg ke-4 Des</div>
+        <div>
+          <div class="tl-title">Laporan Akhir Pra-Studi Kelayakan</div>
+          <div class="tl-desc">Disusun Tim Pakar (Lampiran 6), memuat rekomendasi kelayakan produk Anda.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Jan 2027</div>
+        <div>
+          <div class="tl-title">Monitoring Laporan Akhir &amp; Klasterisasi Produk</div>
+          <div class="tl-desc">DHK memvalidasi rekomendasi Tim Pakar dan menentukan klaster: Layak (Tipe 1 atau Task Force) atau Tidak Didanai.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date mono">Feb 2027</div>
+        <div>
+          <div class="tl-title">Pengumuman Hasil Pra-Studi Kelayakan</div>
+          <div class="tl-desc">Judul yang berpotensi didanai untuk penelitian lanjutan tahun 2027 diumumkan. Kalau produk Anda masuk klaster Layak, tahap Lampiran 7 (proposal penelitian lanjutan, dengan mitra) baru dimulai di sini.</div>
         </div>
       </div>
     </div>
+    <div class="isi-block" style="margin-top:18px;"><b>Catatan sumber:</b> penjelasan lisan pada sesi sosialisasi menyebut jangka waktu sedikit berbeda dari slide (misalnya "tim pengkaji bekerja September-November"). Halaman ini mengikuti slide linimasa resmi karena lebih presisi dan menyebutkan pengkajian berjalan sampai Desember, bukan berhenti di November. Kalau ada perbedaan dengan pengumuman terbaru di sistem HILIRISET, sistem HILIRISET yang berlaku.</div>
   </div>
 </section>
 
 <section id="cakupan">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Klaster &amp; Cakupan</div>
-      <h2>Jalur Layak vs. Task Force</h2>
-      <p>Berdasarkan hasil validasi reviewer atas rekomendasi Pra-Studi Kelayakan, produk Layak dibagi ke dua jalur pendanaan yang berbeda pendekatannya. Cek jalur Anda ke RTT jika belum yakin.</p>
+      <div class="eyebrow">Setelah Terpilih</div>
+      <span class="later-flag">Tahap lanjutan, belum perlu ditindaklanjuti sekarang</span>
+      <h2>Apa yang terjadi setelah usulan Anda diseleksi</h2>
+      <p>Kalau produk Anda lolos seleksi DHK, langkah berikutnya adalah Pra-Studi Kelayakan: kajian oleh Tim Pakar (5 orang, 1 ketua dan 4 anggota, dengan kepakaran teknis, pasar dan model bisnis, keuangan dan risiko, serta legal dan regulasi) terhadap tujuh aspek produk Anda. Anda sebagai peneliti pemilik produk tetap dilibatkan aktif selama kajian ini, termasuk dalam Focus Group Discussion atau Business Matching dengan calon mitra. Bagian ini menjelaskan hasil kajian tersebut, bukan sesuatu yang perlu Anda susun sekarang.</p>
     </div>
 
     <div class="tkt-strip">
-      <div class="tkt-out">TKT &lt; 6<br>Tidak didanai tahap ini</div>
-      <div class="tkt-in">TKT 6–8<br>Cakupan Dorongan Teknologi</div>
+      <div class="tkt-out">TKT &lt; 6<br>Belum masuk skema ini</div>
+      <div class="tkt-in">TKT 6-8<br>Cakupan Dorongan Teknologi</div>
       <div class="tkt-out">TKT 9<br>Sudah siap pasar</div>
     </div>
-    <div class="src-note">Sumber: Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis – Dorongan Teknologi Tahun 2026, Bab III.E</div>
+    <div class="src-note">Sumber: Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis - Dorongan Teknologi Tahun 2026, Bab III.C-E</div>
 
     <div class="klaster-toggle" role="tablist">
       <button class="klaster-btn active" data-target="tipe1">Jalur Layak (Tipe 1)</button>
       <button class="klaster-btn" data-target="taskforce">Task Force (Tipe 2)</button>
+      <button class="klaster-btn" data-target="tidakdidanai">Tidak Didanai</button>
     </div>
 
     <div class="klaster-panel active" id="panel-tipe1">
       <div class="scope-box on-white">
-        <h3><span class="pill good">Tipe 1</span> Jalur Layak — siap eksekusi</h3>
-        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:10px;">Semua indikator (teknis, pasar, keuangan, legal/regulasi) dinyatakan Layak, dan mitra sudah ada. Risiko yang tersisa bukan lagi kelayakan konsep, tapi implementasi, integrasi, dan skalabilitas.</p>
+        <h3><span class="pill good">Tipe 1</span> Jalur Layak, siap eksekusi</h3>
+        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:10px;">Semua indikator (teknis, pasar, keuangan, legal/regulasi) dinyatakan Layak, dan mitra sudah terbentuk lewat proses Business Matching selama Pra-Studi Kelayakan. Risiko yang tersisa bukan lagi kelayakan konsep, melainkan implementasi, integrasi, dan skalabilitas.</p>
         <ul>
-          <li>Fokus proposal: penguatan teknologi inti, validasi teknis lanjutan di lingkungan pengguna, kesiapan produksi awal dan adopsi.</li>
-          <li>Kegiatan tindak lanjut: rencana kerja teknis terstruktur, uji coba scale-up bersama mitra, strategi adopsi &amp; implementasi.</li>
-          <li>Kriteria klaster: seluruh aspek Layak/Ya, ada mitra, dan secara finansial menarik <i>atau</i> strategis bagi kepentingan nasional meski belum viable secara komersial.</li>
+          <li>Fokus proposal lanjutan nanti: penguatan teknologi inti, validasi teknis lanjutan di lingkungan pengguna, kesiapan produksi awal dan adopsi.</li>
+          <li>Kegiatan tindak lanjut: rencana kerja teknis terstruktur, uji coba scale-up bersama mitra, strategi adopsi dan implementasi.</li>
+          <li>Kriteria klaster: seluruh aspek Layak/Ya, ada mitra, dan secara finansial menarik atau strategis bagi kepentingan nasional meski belum viable secara komersial.</li>
         </ul>
       </div>
     </div>
 
     <div class="klaster-panel" id="panel-taskforce">
       <div class="scope-box on-white">
-        <h3><span class="pill warn">Tipe 2</span> Task Force — masih ada hambatan kritis</h3>
-        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:10px;">TKT 6–8, potensi hilirisasi jelas, tapi salah satu aspek teknis (di luar TKT) atau pasar masih dinyatakan belum layak. Pendanaan penuh dinilai belum efisien tanpa kepastian bahwa hambatan ini bisa diselesaikan.</p>
+        <h3><span class="pill warn">Tipe 2</span> Task Force, masih ada hambatan kritis</h3>
+        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:10px;">TKT 6-8, potensi hilirisasi jelas, tapi salah satu aspek teknis (di luar TKT) atau pasar masih dinyatakan belum layak. Pendanaan penuh dinilai belum efisien tanpa kepastian bahwa hambatan ini bisa diselesaikan.</p>
         <ul>
-          <li>Diawali pendampingan &amp; penajaman isu oleh DHK untuk mengidentifikasi <i>bottleneck</i> kritis.</li>
-          <li>Proposal harus memuat bagian <b>Task Force</b> khusus: identifikasi akar masalah, ruang lingkup intervensi, dan rencana penyelesaian bottleneck.</li>
-          <li>Punya monev tambahan di awal — 2 bulan setelah penetapan pendanaan, khusus mengecek penyelesaian bottleneck. Ini di luar monev reguler yang berlaku untuk semua klaster (lihat <a href="#pelaporan">Pelaporan &amp; Monev</a>).</li>
+          <li>Diawali pendampingan dan penajaman isu oleh DHK untuk mengidentifikasi bottleneck kritis.</li>
+          <li>Proposal lanjutan nanti harus memuat bagian Task Force khusus: identifikasi akar masalah, ruang lingkup intervensi, dan rencana penyelesaian bottleneck.</li>
+          <li>Punya monev tambahan di awal, 2 bulan setelah penetapan pendanaan, khusus mengecek penyelesaian bottleneck. Ini di luar monev reguler yang berlaku untuk semua klaster (lihat <a href="#pelaporan">Pelaporan &amp; Monev</a>).</li>
           <li>Kriteria klaster: salah satu aspek teknis/pasar belum layak, tapi legal/regulasi produk boleh dipasarkan di Indonesia, ada mitra, dan finansial menarik atau strategis nasional.</li>
         </ul>
       </div>
     </div>
-    <div class="src-note">Sumber: Panduan Teknis 2026, Bab III.E–F</div>
+
+    <div class="klaster-panel" id="panel-tidakdidanai">
+      <div class="scope-box on-white">
+        <h3><span class="pill warn">Klaster</span> Tidak Didanai, bukan penolakan permanen</h3>
+        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:10px;">Status ini bukan penilaian negatif terhadap kualitas riset, melainkan penyesuaian antara tingkat kesiapan produk dan jenis intervensi yang paling tepat saat ini.</p>
+        <ul>
+          <li>Berlaku untuk TKT di bawah 6 (lebih tepat lanjut riset lewat DPPM atau pendanaan lain), TKT 9 (sudah siap pasar, pendanaan Dorongan Teknologi tidak lagi relevan), atau TKT 6-8 yang tidak viable secara finansial dan tidak strategis, belum punya mitra sampai Pra-Studi Kelayakan selesai, atau dilarang secara hukum untuk dipasarkan di Indonesia.</li>
+          <li>Tindak lanjut yang mungkin: reposisi pengembangan produk (riset dasar, riset lanjutan, peningkatan TKT, diseminasi), atau exit strategy dengan status controlled pause dan evaluasi ulang dalam 3 tahun kalau konteksnya berubah.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="src-note">Sumber: Panduan Teknis 2026, Bab III.E-F</div>
   </div>
 </section>
 
 <section class="alt" id="isi-proposal">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Isi Proposal</div>
-      <h2>Yang wajib ada di proposal Anda</h2>
-      <p>Mengikuti format Lampiran 7 pada Panduan Teknis 2026. Ini adalah struktur wajib, bukan saran RTT.</p>
+      <div class="eyebrow">Isi Usulan Sekarang</div>
+      <span class="now-flag">Dokumen yang perlu Anda unggah sekarang</span>
+      <h2>Yang wajib ada di Lampiran 1 dan 2</h2>
+      <p>Mengikuti format Lampiran 1 (Format Proposal Produk atau Teknologi) dan Lampiran 2 (Surat Pernyataan Orisinalitas) pada Panduan Teknis 2026. Tidak ada RAB atau dokumen mitra di tahap ini.</p>
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Bagian</th><th>Isi</th><th>Batas</th></tr></thead>
+        <thead><tr><th>Bagian (Lampiran 1)</th><th>Isi</th><th>Batas</th></tr></thead>
         <tbody>
-          <tr><td>Judul</td><td>Judul usulan penelitian</td><td class="num">≤20 kata</td></tr>
-          <tr><td>Ringkasan</td><td>Urgensi, tujuan, metode, luaran target, kemitraan yang sudah dibangun — sebagai tindak lanjut Pra-Studi Kelayakan</td><td class="num">≤500 kata</td></tr>
-          <tr><td>Kata Kunci</td><td>Dipisah tanda titik koma</td><td class="num">5 kata</td></tr>
-          <tr><td>Pendahuluan</td><td>Permasalahan, inovasi &amp; kebaruan berdasarkan hasil Pra-Studi Kelayakan, urgensi bagi mitra</td><td class="num">≤1000 kata</td></tr>
-          <tr><td>Peta Jalan Pengembangan</td><td>Diagram (bukan parafrase) — 3 milestone berkerangka waktu &amp; TKT dengan target output terukur</td><td class="num">≤1000 kata</td></tr>
-          <tr><td>Metode</td><td>Tindak lanjut konkret atas rekomendasi pengkaji: mitigasi risiko kritis, penyempurnaan fitur, kesenjangan spesifikasi vs standar pengguna, kontribusi natura mitra dengan konversinya</td><td class="num">≤1000 kata</td></tr>
-          <tr><td>Task Force <span class="pill warn" style="margin-left:6px;">Tipe 2 saja</span></td><td>Identifikasi &amp; penajaman bottleneck, rencana penyelesaian, evaluasi hasil intervensi</td><td class="num">—</td></tr>
-          <tr><td>Rencana Operasional</td><td>Disusun bersama mitra — deskripsi produk akhir, skema produksi, SDM &amp; infrastruktur, jadwal produksi/distribusi</td><td class="num">wajib bersama mitra</td></tr>
-          <tr><td>Jadwal Penelitian</td><td>Per bulan, disesuaikan durasi pelaksanaan</td><td class="num">—</td></tr>
-          <tr><td>Daftar Pustaka</td><td>Sistem penomoran sesuai urutan sitasi</td><td class="num">—</td></tr>
+          <tr><td>Nama Produk/Teknologi</td><td>Nama produk atau teknologi yang sudah dikembangkan sampai TKT 6</td><td class="num">bebas</td></tr>
+          <tr><td>Judul Penelitian Pendukung</td><td>Tabel judul-judul penelitian ketua maupun anggota dalam pengembangan produk yang sudah dilaksanakan sampai TKT 6, lengkap dengan tahun, jumlah dana, dan sumber dana</td><td class="num">bebas</td></tr>
+          <tr><td>Aspek Teknis</td><td>Proses produksi, kebutuhan bahan baku, peralatan, tenaga kerja, serta hasil validasi teknologi</td><td class="num">maks 300 kata</td></tr>
+          <tr><td>Aspek Pasar</td><td>Segmentasi dan ukuran pasar potensial, tren industri, kompetitor utama, strategi masuk pasar, ditambah rencana validasi pasar: desain survei (target responden, jumlah sampel, metode sampling), analisis kompetitor, studi harga yang rela dibayarkan konsumen (willingness to pay), dan rencana Focus Group Discussion</td><td class="num">maks 300 kata</td></tr>
+          <tr><td>Lampiran-lampiran</td><td>Dokumen pendukung relevan, Panduan Teknis tidak merinci daftar wajibnya</td><td class="num">bebas</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="isi-block"><b>Dokumen pendukung wajib:</b> Lampiran 8 (Surat Pernyataan Dukungan Pendanaan Mitra, kop surat mitra + materai + cap), Lampiran 9 (Profil Mitra, khusus DUDI, dengan scan NIB), dan SPTJB — Surat Pernyataan Tanggung Jawab Belanja (Lampiran 12 &amp; 13). Template resmi ada di dalam Panduan Teknis 2026 — <b>ISI:</b> Tommy, apakah RTT ingin menyediakan versi Word/Excel terpisah yang bisa langsung diisi dosen, atau cukup arahkan ke halaman/PDF panduan resmi?</div>
+    <div class="isi-block"><b>Dokumen kedua yang wajib:</b> Lampiran 2, Surat Pernyataan Orisinalitas Produk atau Teknologi. Ditulis di atas kop surat perguruan tinggi, memuat nama, jabatan, NIP/NIK, nama unit, judul produk, nama dan NIDN/NIDK Ketua Peneliti, serta dua pernyataan: (1) produk adalah hasil penelitian orisinal dari tim dosen/peneliti pengusul dan tidak melanggar hak kekayaan intelektual pihak lain, (2) produk tidak sedang dan/atau tidak akan diusulkan untuk memperoleh pendanaan dari program lain, baik dari Kemdiktisaintek maupun sumber lain, selama periode program berjalan. Ditandatangani Ketua Peneliti dan pimpinan unit pengelola. Template lengkap ada di Lampiran 1 dan 2 Panduan Teknis 2026.</div>
 
     <div class="scope-box" style="margin-top:22px;">
-      <h3>Kendali mutu internal sebelum submit</h3>
-      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Tujuh hal yang wajib dicek tim sebelum proposal dikirim ke RTT — Panduan Teknis 2026, Bab III.G.</p>
+      <h3>Siapa yang mengusulkan</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Panduan Teknis 2026, Bab III.A.1.</p>
       <ul>
-        <li>Laporan akhir Pra-Studi Kelayakan sudah dipahami tim, bukan cuma dibaca sekilas.</li>
-        <li>Rekomendasi pengkaji sudah diterjemahkan jadi rencana kerja konkret — bukan disalin ulang.</li>
-        <li>Target luaran spesifik dan terukur, bukan pernyataan umum.</li>
-        <li>Komitmen mitra sudah terdokumentasi resmi, bukan janji lisan.</li>
-        <li>RAB disusun berbasis aktivitas (<i>activity-based costing</i>), bukan alokasi rata.</li>
-        <li>Mitigasi risiko utama sudah disiapkan.</li>
-        <li>Peta jalan produk sudah diperbarui sesuai kondisi terkini.</li>
+        <li>Diusulkan oleh pimpinan yang menangani bidang riset dan inovasi atau lembaga sejenis di perguruan tinggi (untuk BINUS, lewat RTT), atau</li>
+        <li>Instansi atau dosen yang ditunjuk langsung oleh Kemdiktisaintek.</li>
       </ul>
+    </div>
+
+    <div class="scope-box" style="margin-top:18px;">
+      <span class="later-flag">Tahap lanjutan, belum perlu disiapkan sekarang</span>
+      <h3>Kalau produk Anda dinyatakan Layak: proposal Lampiran 7</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Ini terjadi setelah Pra-Studi Kelayakan selesai, sekitar awal 2027 menurut linimasa resmi. Ditampilkan di sini supaya Anda tahu gambaran besarnya, bukan untuk disiapkan sekarang.</p>
+      <div class="table-wrap" style="margin-top:14px;">
+        <table>
+          <thead><tr><th>Bagian</th><th>Isi</th><th>Batas</th></tr></thead>
+          <tbody>
+            <tr><td>Judul</td><td>Judul usulan penelitian</td><td class="num">maks 20 kata</td></tr>
+            <tr><td>Ringkasan</td><td>Urgensi, tujuan, metode, luaran target, kemitraan yang sudah dibangun, sebagai tindak lanjut Pra-Studi Kelayakan</td><td class="num">maks 500 kata</td></tr>
+            <tr><td>Kata Kunci</td><td>Dipisah tanda titik koma</td><td class="num">5 kata</td></tr>
+            <tr><td>Pendahuluan</td><td>Permasalahan, inovasi dan kebaruan berdasarkan hasil Pra-Studi Kelayakan, urgensi bagi mitra</td><td class="num">maks 1000 kata</td></tr>
+            <tr><td>Peta Jalan Pengembangan</td><td>Diagram (bukan parafrase), 3 milestone berkerangka waktu dan TKT dengan target output terukur</td><td class="num">maks 1000 kata</td></tr>
+            <tr><td>Metode</td><td>Tindak lanjut konkret atas rekomendasi pengkaji: mitigasi risiko kritis, penyempurnaan fitur, kesenjangan spesifikasi terhadap standar pengguna, kontribusi natura mitra dengan konversinya</td><td class="num">maks 1000 kata</td></tr>
+            <tr><td>Task Force <span class="pill warn" style="margin-left:6px;">Tipe 2 saja</span></td><td>Identifikasi dan penajaman bottleneck, rencana penyelesaian, evaluasi hasil intervensi</td><td class="num">tidak diatur</td></tr>
+            <tr><td>Rencana Operasional</td><td>Disusun bersama mitra: deskripsi produk akhir, skema produksi, SDM dan infrastruktur, jadwal produksi/distribusi</td><td class="num">wajib bersama mitra</td></tr>
+            <tr><td>Jadwal Penelitian</td><td>Per bulan, disesuaikan durasi pelaksanaan</td><td class="num">tidak diatur</td></tr>
+            <tr><td>Daftar Pustaka</td><td>Sistem penomoran sesuai urutan sitasi</td><td class="num">tidak diatur</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin-top:10px;">Dokumen pendukung yang menyertainya nanti: Lampiran 8 (Surat Pernyataan Dukungan Pendanaan Mitra, kop surat mitra, materai, cap, tanda tangan pimpinan tertinggi), Lampiran 9 (Profil Mitra, khusus mitra DUDI, dilampiri scan NIB), dan SPTJB (Surat Pernyataan Tanggung Jawab Belanja, Lampiran 12 dan 13).</p>
+      <div style="margin-top:14px;">
+        <h4 style="font-size:14.5px;margin-bottom:8px;">Kendali mutu internal sebelum submit Lampiran 7 (Bab III.G)</h4>
+        <ul style="font-size:13.5px;color:var(--ink-soft);padding-left:18px;margin:0;">
+          <li style="margin-bottom:5px;">Laporan akhir Pra-Studi Kelayakan sudah dipahami tim, bukan cuma dibaca sekilas.</li>
+          <li style="margin-bottom:5px;">Rekomendasi pengkaji sudah diterjemahkan jadi rencana kerja konkret, bukan disalin ulang.</li>
+          <li style="margin-bottom:5px;">Target luaran spesifik dan terukur, bukan pernyataan umum.</li>
+          <li style="margin-bottom:5px;">Komitmen mitra sudah terdokumentasi resmi, bukan janji lisan.</li>
+          <li style="margin-bottom:5px;">RAB disusun berbasis aktivitas (activity-based costing), bukan alokasi rata.</li>
+          <li style="margin-bottom:5px;">Mitigasi risiko utama sudah disiapkan.</li>
+          <li>Peta jalan produk sudah diperbarui sesuai kondisi terkini.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -759,20 +833,46 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Tips &amp; Trik</div>
-      <h2>Beberapa hal yang bikin proposal Anda lebih kuat</h2>
-      <p>Disarikan dari materi workshop internal "Pembuatan Proposal Hibah Penelitian Terapan DIKTI 2026" dan panduan review Hiliriset. Ikuti poin-poin ini sebelum mengirim draft ke RTT.</p>
+      <h2>Beberapa hal yang bikin usulan Anda lebih kuat</h2>
+      <p>Bagian pertama untuk usulan Lampiran 1 yang Anda susun sekarang. Bagian kedua, ditandai jelas, adalah untuk proposal Lampiran 7 nanti, disarikan dari materi workshop internal "Pembuatan Proposal Hibah Penelitian Terapan DIKTI 2026" dan panduan review Hiliriset.</p>
     </div>
 
+    <div class="now-flag">Untuk usulan sekarang</div>
+    <div class="cards" style="margin-top:2px;">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Spesifik di Aspek Teknis</h3>
+        <p>Dengan batas 300 kata, jangan berhenti di deskripsi produk secara umum. Sebutkan proses produksi, bahan baku, dan bukti validasi teknis yang paling kuat lebih dulu.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>Jangan lewatkan rencana validasi pasar</h3>
+        <p>Aspek Pasar meminta desain survei, analisis kompetitor, studi willingness to pay, dan rencana FGD. Sebutkan rencana konkretnya walau ringkas, bukan hanya klaim potensi pasar besar.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Sebutkan nilai tambah, bukan cuma fitur</h3>
+        <p>Jelaskan mengapa produk ini lebih baik dari solusi yang ada, siapa target penggunanya, dan mengapa mereka akan mengadopsinya.</p>
+      </div>
+      <div class="card">
+        <div class="num">04</div>
+        <h3>Cek konsistensi TKT</h3>
+        <p>Pastikan bukti validasi yang Anda tulis benar-benar menunjukkan TKT 6-8: sudah lewat uji skala terbatas dengan kinerja stabil, bukan baru prototipe laboratorium.</p>
+      </div>
+    </div>
+
+    <div class="later-flag" style="margin-top:32px;">Untuk proposal Lampiran 7 nanti, kalau produk Anda dinyatakan Layak</div>
+
     <div class="scope-box on-white">
-      <h3>Cara reviewer Hiliriset membaca proposal Anda</h3>
-      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Berbeda dari skema penelitian dasar (DPPM/BIMA), reviewer Hiliriset menilai proposal lewat urutan <b>Kesesuaian → Substansi → Tampilan</b> — dan menimbang tujuh hal sekaligus:</p>
+      <h3>Cara reviewer Hiliriset membaca proposal lanjutan</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Berbeda dari skema penelitian dasar (DPPM/BIMA), reviewer Hiliriset menilai proposal lewat urutan Kesesuaian, Substansi, Tampilan, dan menimbang enam hal sekaligus:</p>
       <ul>
-        <li><b>Researcher Capability</b> — apakah rekam jejak Anda relevan dengan topik yang diajukan, bukan sekadar relevan dengan bidang ilmu secara umum.</li>
-        <li><b>Institutional Capabilities</b> — apakah BINUS/unit Anda punya fasilitas dan dukungan yang memadai untuk menjalankan riset ini.</li>
-        <li><b>Industrial Partnership</b> — seberapa nyata dan konkret kontribusi mitra, bukan hanya MoU di atas kertas.</li>
-        <li><b>Feasible to Run/Executable</b> — apakah rencana aktivitas realistis dieksekusi dalam jangka waktu yang diajukan.</li>
-        <li><b>Campus &amp; Nation Advantages</b> — nilai tambah bagi BINUS dan bagi prioritas riset nasional.</li>
-        <li><b>Ethical</b> — kepatuhan etik penelitian, termasuk untuk riset yang melibatkan data/pengguna eksternal.</li>
+        <li><b>Researcher Capability</b>, rekam jejak Anda harus relevan dengan topik spesifik yang diajukan, bukan dengan bidang ilmu secara umum.</li>
+        <li><b>Institutional Capabilities</b>, apakah BINUS/unit Anda punya fasilitas dan dukungan yang memadai untuk menjalankan riset ini.</li>
+        <li><b>Industrial Partnership</b>, seberapa nyata dan konkret kontribusi mitra, bukan hanya MoU di atas kertas.</li>
+        <li><b>Feasible to Run/Executable</b>, apakah rencana aktivitas realistis dieksekusi dalam jangka waktu yang diajukan.</li>
+        <li><b>Campus &amp; Nation Advantages</b>, nilai tambah bagi BINUS dan bagi prioritas riset nasional.</li>
+        <li><b>Ethical</b>, kepatuhan etik penelitian, termasuk untuk riset yang melibatkan data/pengguna eksternal.</li>
       </ul>
     </div>
 
@@ -785,12 +885,12 @@
       <div class="card">
         <div class="num">02</div>
         <h3>Roadmap harus jelas</h3>
-        <p>Tunjukkan milestone dari masa lalu → sekarang → masa depan, didukung bukti publikasi/HKI/prototipe — bukan sekadar narasi rencana ke depan.</p>
+        <p>Tunjukkan milestone dari masa lalu, sekarang, dan masa depan, didukung bukti publikasi, HKI, dan prototipe. Narasi rencana ke depan saja tidak cukup.</p>
       </div>
       <div class="card">
         <div class="num">03</div>
         <h3>Rekam jejak harus match topik</h3>
-        <p>Reviewer memeriksa apakah publikasi, prototipe, dan HKI Anda benar-benar nyambung dengan topik yang diusulkan — bukan sekadar sama bidang ilmu.</p>
+        <p>Reviewer memeriksa apakah publikasi, prototipe, dan HKI Anda benar-benar nyambung dengan topik yang diusulkan. Kesamaan bidang ilmu saja tidak cukup.</p>
       </div>
       <div class="card">
         <div class="num">04</div>
@@ -800,52 +900,52 @@
       <div class="card">
         <div class="num">05</div>
         <h3>Aktivitas riset harus tajam</h3>
-        <p>Hindari aktivitas yang berulang/tidak efektif dan target yang tidak terukur — setiap aktivitas harus punya luaran dan indikator capaian yang jelas.</p>
+        <p>Hindari aktivitas yang berulang atau tidak efektif dan target yang tidak terukur. Setiap aktivitas harus punya luaran dan indikator capaian yang jelas.</p>
       </div>
       <div class="card">
         <div class="num">06</div>
         <h3>Peran mitra harus eksplisit</h3>
-        <p>Jelaskan spesifik apa yang dikontribusikan/dijalankan mitra dan tim pengusul (bisa dalam tabel/ilustrasi) — bukan pernyataan dukungan yang umum.</p>
+        <p>Jelaskan spesifik apa yang dikontribusikan atau dijalankan mitra dan tim pengusul, bisa dalam tabel atau ilustrasi, bukan pernyataan dukungan yang umum.</p>
       </div>
     </div>
 
     <div class="scope-box on-white" style="margin-top:22px;">
-      <h3>Cara menulis 3 bagian inti proposal Hiliriset</h3>
+      <h3>Cara menulis 3 bagian inti proposal lanjutan</h3>
       <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Ini bagian yang paling sering ditulis terlalu tipis. Perkuat masing-masing dengan detail berikut:</p>
       <ul>
-        <li><b>Kebutuhan Teknologi</b> — jelaskan problem statement teknis secara spesifik: apakah masalahnya di proses manufaktur, material, desain, atau performa produk. Sebutkan bagian mana dari produk yang perlu dikembangkan lebih lanjut dan mengapa — jangan berhenti di deskripsi produk secara umum.</li>
-        <li><b>Peran &amp; Tanggung Jawab Masing-Masing Pihak</b> — buat tabel atau ilustrasi yang eksplisit: apa yang dikerjakan tim pengusul, apa yang dikerjakan mitra (fasilitas, dukungan teknis, validasi lapangan). Meski Lampiran 7 tidak memuat RAB, aktivitas yang disebutkan di sini tetap harus memberi gambaran pengelolaan pendanaan.</li>
-        <li><b>Mekanisme Implementasi, Validasi, dan Adopsi</b> — jelaskan proses implementasi teknis, sejauh mana teknologi akan divalidasi (uji eksternal, sertifikasi), dan bagaimana rencana adopsi oleh mitra — termasuk langkah perlindungan HKI sebelum teknologi diserahkan/dikomersialkan.</li>
+        <li><b>Kebutuhan Teknologi</b>, jelaskan problem statement teknis secara spesifik: apakah masalahnya di proses manufaktur, material, desain, atau performa produk. Sebutkan bagian mana dari produk yang perlu dikembangkan lebih lanjut dan mengapa, jangan berhenti di deskripsi produk secara umum.</li>
+        <li><b>Peran dan Tanggung Jawab Masing-Masing Pihak</b>, buat tabel atau ilustrasi yang eksplisit: apa yang dikerjakan tim pengusul, apa yang dikerjakan mitra (fasilitas, dukungan teknis, validasi lapangan). Meski Lampiran 7 tidak memuat RAB, aktivitas yang disebutkan di sini tetap harus memberi gambaran pengelolaan pendanaan.</li>
+        <li><b>Mekanisme Implementasi, Validasi, dan Adopsi</b>, jelaskan proses implementasi teknis, sejauh mana teknologi akan divalidasi (uji eksternal, sertifikasi), dan bagaimana rencana adopsi oleh mitra, termasuk langkah perlindungan HKI sebelum teknologi diserahkan atau dikomersialkan.</li>
       </ul>
     </div>
 
     <div class="scope-box on-white" style="margin-top:22px;">
       <h3>RAB: 5 prinsip yang dipakai reviewer</h3>
-      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Sumber: Petunjuk Teknis Review RAB RISPRO Mandatori LPDP. RAB adalah alat untuk memastikan riset berjalan optimal — bukan sekadar berhemat.</p>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Sumber: Petunjuk Teknis Review RAB RISPRO Mandatori LPDP. RAB adalah alat untuk memastikan riset berjalan optimal. Belum relevan untuk usulan sekarang, karena Lampiran 1 tidak memuat RAB.</p>
       <ul>
-        <li><b>Allowable</b> — sesuai standar/satuan biaya yang berlaku (Kemenkeu atau standar BINUS).</li>
-        <li><b>Relate-able</b> — setiap pos anggaran bisa ditelusuri ke indikator kinerja/output riset; jelaskan alasannya di proposal, jangan biarkan reviewer menebak.</li>
-        <li><b>Reasonable</b> — volume dan harga wajar; hindari kuantitas atau harga yang mengada-ada.</li>
-        <li><b>Flexible</b> — anggaran dalam satu komponen bisa disesuaikan seiring perkembangan riset, dengan pemberitahuan &amp; persetujuan.</li>
-        <li><b>Accountable</b> — setiap pengeluaran bisa dipertanggungjawabkan dan transparan.</li>
+        <li><b>Allowable</b>, sesuai standar/satuan biaya yang berlaku (Kemenkeu atau standar BINUS).</li>
+        <li><b>Relate-able</b>, setiap pos anggaran bisa ditelusuri ke indikator kinerja/output riset, jelaskan alasannya di proposal, jangan biarkan reviewer menebak.</li>
+        <li><b>Reasonable</b>, volume dan harga wajar, hindari kuantitas atau harga yang mengada-ada.</li>
+        <li><b>Flexible</b>, anggaran dalam satu komponen bisa disesuaikan seiring perkembangan riset, dengan pemberitahuan dan persetujuan.</li>
+        <li><b>Accountable</b>, setiap pengeluaran bisa dipertanggungjawabkan dan transparan.</li>
       </ul>
-      <p style="font-size:13.5px;color:var(--ink-soft);margin-top:10px;">RAB yang banyak memuat aktivitas tidak efektif berpotensi jadi temuan audit — bukan hanya alasan proposal ditolak.</p>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin-top:10px;">RAB yang banyak memuat aktivitas tidak efektif berpotensi jadi temuan audit, bukan hanya alasan proposal ditolak.</p>
     </div>
 
     <div class="scope-box on-white" style="margin-top:22px;">
-      <h3>Checklist praktis sebelum submit RAB</h3>
+      <h3>Checklist praktis sebelum submit RAB (tahap lanjutan)</h3>
       <ul>
-        <li>Cocokkan setiap pos RAB dengan Pedoman RAB skema Anda (Prioritas/BOPTN atau Strategis/LPDP) — batasan honorarium dan larangan belanja berbeda di masing-masing.</li>
-        <li>Pisahkan tegas mana pos yang "boleh" dan "tidak boleh" — lihat daftar larangan di bagian <a href="#danaan">Pendanaan</a> di atas sebelum menyusun anggaran.</li>
-        <li>Pastikan setiap pos RAB align dengan aktivitas utama yang dijelaskan di narasi proposal — reviewer akan membandingkan keduanya.</li>
-        <li>Kelompokkan pos pengeluaran sesuai klasifikasi kegiatan (bahan, pengumpulan data, sewa peralatan, biaya uji, biaya lain-lain) — jangan digabung sembarangan.</li>
-        <li>Markup wajar boleh (pajak, ongkir, proses pengadaan) tapi kuantitas harus tetap realistis — hindari volume yang mengada-ada.</li>
-        <li>Pastikan seluruh anggaran bisa terserap dan dipertanggungjawabkan secara transparan — RAB yang tidak terserap penuh juga jadi catatan monev.</li>
+        <li>Cocokkan setiap pos RAB dengan Pedoman RAB skema Anda (Prioritas/BOPTN atau Strategis/LPDP), batasan honorarium dan larangan belanja berbeda di masing-masing.</li>
+        <li>Pisahkan tegas mana pos yang boleh dan tidak boleh, lihat daftar larangan di bagian <a href="#danaan">Pendanaan</a> sebelum menyusun anggaran.</li>
+        <li>Pastikan setiap pos RAB sejalan dengan aktivitas utama yang dijelaskan di narasi proposal, reviewer akan membandingkan keduanya.</li>
+        <li>Kelompokkan pos pengeluaran sesuai klasifikasi kegiatan (bahan, pengumpulan data, sewa peralatan, biaya uji, biaya lain-lain), jangan digabung sembarangan.</li>
+        <li>Markup wajar boleh (pajak, ongkir, proses pengadaan) tapi kuantitas harus tetap realistis, hindari volume yang mengada-ada.</li>
+        <li>Pastikan seluruh anggaran bisa terserap dan dipertanggungjawabkan secara transparan, RAB yang tidak terserap penuh juga jadi catatan monev.</li>
       </ul>
     </div>
 
     <div class="isi-block warn-block">
-      <b>Contoh kasus gagal:</b> Proposal Hiliriset Ajakan Industri berjudul "Las Baterai Kendaraan Listrik" — penyusunan sudah sesuai skema pendanaan, tapi gagal karena (1) rekam jejak dosen kurang meyakinkan, dan (2) mitra kurang yakin dengan kapabilitas yang akan dijalankan dosen. Kesesuaian format tidak cukup jika substansi kapabilitas tim tidak meyakinkan reviewer maupun mitra.
+      <b>Contoh kasus gagal (skema lain, konteks serupa):</b> Proposal Hiliriset Ajakan Industri berjudul "Las Baterai Kendaraan Listrik", penyusunan sudah sesuai skema pendanaan, tapi gagal karena rekam jejak dosen kurang meyakinkan, dan mitra kurang yakin dengan kapabilitas yang akan dijalankan dosen. Kesesuaian format tidak cukup jika substansi kapabilitas tim tidak meyakinkan reviewer maupun mitra.
     </div>
   </div>
 </section>
@@ -853,46 +953,53 @@
 <section class="alt" id="tim">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Tim &amp; Mitra</div>
-      <h2>Siapa yang boleh — dan wajib — ada di tim Anda</h2>
-      <p>Syarat inti Ketua Tim sudah ada di <a href="#cek">Cek Kelayakan</a>. Bagian ini melengkapi dengan kuota, syarat Anggota, dan batasan peran Mitra.</p>
+      <div class="eyebrow">Ketua, Tim &amp; Mitra</div>
+      <h2>Siapa yang perlu memenuhi syarat, dan kapan</h2>
+      <p>Di tahap usulan sekarang, hanya syarat Ketua Peneliti secara individu yang berlaku (Bab III.A.4). Ketentuan anggota tim, kuota lintas skema, dan mitra baru berlaku nanti, saat produk Anda dinyatakan Layak dan masuk proposal Lampiran 7 (Bab III.H).</p>
     </div>
 
-    <div class="cards" style="grid-template-columns:repeat(3,1fr);">
+    <div class="now-flag">Syarat sekarang</div>
+    <div class="scope-box" style="margin-top:2px;">
+      <h3>Ketua Peneliti pemilik produk</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Sama seperti daftar di <a href="#cek">Cek Kelayakan</a>: dosen aktif PDDIKTI, S3 atau S2 dengan jabatan fungsional minimal Lektor, pemilik sah atau pengembang utama produk, tidak berencana pindah homebase, dan punya rekam jejak minimal 2 penelitian relevan plus 2 artikel jurnal internasional bereputasi (atau kombinasi artikel dan KI). Belum ada syarat jumlah anggota tim atau mitra di tahap ini.</p>
+    </div>
+
+    <div class="later-flag" style="margin-top:28px;">Syarat nanti, tahap Lampiran 7</div>
+    <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-top:2px;">
       <div class="card">
         <div class="num">Ketua</div>
         <h3>Kuota bisa diperluas</h3>
-        <p>Dasarnya 1 judul ketua + 1 anggota. Dengan min. 2 penelitian relevan, 2 artikel jurnal internasional bereputasi (penulis pertama/korespondensi), dan 2 KI relevan selain Hak Cipta — kuota naik jadi maks. 2 judul ketua, atau 1 ketua + 3 anggota, atau 4 anggota.</p>
+        <p>Dasarnya 1 judul ketua ditambah 1 anggota. Dengan minimal 2 penelitian relevan, 2 artikel jurnal internasional bereputasi (penulis pertama/korespondensi), dan 2 KI relevan selain Hak Cipta, kuota naik jadi maksimal 2 judul ketua, atau 1 ketua dengan 3 anggota, atau 4 anggota.</p>
       </div>
       <div class="card">
         <div class="num">Anggota</div>
-        <h3>3–5 orang per tim</h3>
-        <p>Minimal 1 dosen dari PT yang sama dengan ketua. Anggota lain boleh dari PT/lembaga riset lain atau NGO — tapi <b>tidak boleh</b> dari institusi mitra (konflik kepentingan).</p>
+        <h3>3-5 orang per tim</h3>
+        <p>Minimal 1 dosen dari PT yang sama dengan ketua. Anggota lain boleh dari PT/lembaga riset lain atau NGO, tapi tidak boleh dari institusi mitra karena berpotensi konflik kepentingan.</p>
       </div>
       <div class="card">
         <div class="num">Mitra</div>
-        <h3>Peran harus konkret</h3>
-        <p>Kontribusi mitra wajib spesifik, terukur, dan relevan dengan tahapan riset — bukan dukungan simbolik/administratif di atas kertas.</p>
+        <h3>Wajib, peran harus konkret</h3>
+        <p>Berbeda dari tahap sekarang, di tahap ini mitra wajib ada. Kontribusinya harus spesifik, terukur, dan relevan dengan tahapan riset, bukan dukungan simbolik atau administratif di atas kertas.</p>
       </div>
     </div>
 
     <div class="scope-box" style="margin-top:18px;">
-      <h3>Gate-check tambahan untuk Ketua Tim</h3>
+      <h3>Gate-check tambahan untuk Ketua Tim (tahap lanjutan)</h3>
       <ul>
-        <li><b>Utang luaran maksimum 2</b> — ketua yang belum menuntaskan kewajiban luaran dari penelitian sebelumnya (lebih dari 2 utang) tidak boleh mengajukan judul baru sampai lunas.</li>
-        <li><b>Penggantian ketua</b> dimungkinkan kalau ketua lama tidak lagi memenuhi syarat atau kena batas kuota — diproses langsung di sistem HILIRISET oleh Unit Pengelola dengan persetujuan DHK.</li>
+        <li><b>Utang luaran maksimum 2</b>: ketua yang belum menuntaskan kewajiban luaran dari penelitian sebelumnya (lebih dari 2 utang) tidak boleh mengajukan judul baru sampai lunas.</li>
+        <li><b>Penggantian ketua</b> dimungkinkan kalau ketua lama tidak lagi memenuhi syarat atau kena batas kuota, diproses langsung di sistem HILIRISET oleh Unit Pengelola dengan persetujuan DHK.</li>
       </ul>
     </div>
 
     <div class="scope-box" style="margin-top:18px;">
-      <h3>Aset &amp; kekayaan intelektual</h3>
+      <h3>Aset &amp; kekayaan intelektual (tahap lanjutan)</h3>
       <ul>
-        <li>Aset/modal (mesin, alat lab, dll.) yang dibeli dengan dana kontribusi mitra menjadi <b>hak milik PT</b>, serah terima berbasis dokumen di akhir program.</li>
-        <li>Panduan Teknis 2026 <b>tidak mengatur</b> pembagian kepemilikan HKI produk antara PT dan mitra — ini perlu diatur lewat MoU/PKS masing-masing kerja sama, bukan diasumsikan dari dokumen ini.</li>
+        <li>Aset atau modal (mesin, alat lab, dan sejenisnya) yang dibeli dengan dana kontribusi mitra menjadi hak milik PT, serah terima berbasis dokumen di akhir program.</li>
+        <li>Panduan Teknis 2026 tidak mengatur pembagian kepemilikan HKI produk antara PT dan mitra. Ini perlu diatur lewat MoU/PKS masing-masing kerja sama, bukan diasumsikan dari dokumen ini.</li>
       </ul>
     </div>
 
-    <div class="isi-block"><span class="tag internal" style="color:#8a6a1f;">internal</span> <b>Soal skor SINTA:</b> Panduan Teknis 2026 tidak menyebutnya sama sekali — syarat rekam jejak resmi adalah jumlah penelitian relevan + publikasi jurnal internasional bereputasi + KI, bukan skor SINTA. Kalau RTT menambahkan syarat SINTA, tandai sebagai syarat internal RTT, bukan syarat Kemdiktisaintek.</div>
+    <div class="isi-block"><span class="tag internal" style="color:#8a6a1f;">internal</span> <b>Soal skor SINTA:</b> Panduan Teknis 2026 tidak menyebutnya sama sekali. Syarat rekam jejak resmi adalah jumlah penelitian relevan ditambah publikasi jurnal internasional bereputasi ditambah KI, bukan skor SINTA. Kalau RTT menambahkan syarat SINTA, tandai sebagai syarat internal RTT, bukan syarat Kemdiktisaintek.</div>
   </div>
 </section>
 
@@ -900,14 +1007,19 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Pendanaan</div>
-      <h2>Dua jalur pendanaan — cek yang berlaku untuk produk Anda</h2>
-      <p>Jalur ditentukan oleh skema yang direkomendasikan DHK saat Pra-Studi Kelayakan, bukan pilihan bebas dosen.</p>
+      <span class="later-flag">Berlaku di tahap penelitian lanjutan, bukan di usulan sekarang</span>
+      <h2>Dua jalur pendanaan, cek yang berlaku untuk produk Anda nanti</h2>
+      <p>Tidak ada dana yang cair di tahap usulan produk. Jalur pendanaan ditentukan oleh skema yang direkomendasikan DHK saat Pra-Studi Kelayakan, bukan pilihan bebas dosen, dan baru relevan kalau produk Anda dinyatakan Layak.</p>
     </div>
 
-    <div class="track-grid">
+    <div class="isi-block warn-block">
+      <b>Perlu diverifikasi sebelum RTT mendorong pengajuan secara luas:</b> sumber dana jalur Prioritas disebut dalam Panduan Teknis 2026 sebagai "Bantuan Operasional Perguruan Tinggi Negeri (BOPTN) Penelitian". Sesuai namanya, skema ini secara historis ditujukan untuk PTN. Panduan Teknis 2026 tidak secara eksplisit menyatakan status PTS seperti BINUS, baik sebagai pengecualian maupun sebagai pihak yang diizinkan. RTT perlu mengonfirmasi ke DHK/Kemdiktisaintek sebelum memastikan status eligibilitas BINUS untuk jalur ini. Jalur Strategis (Dana Abadi Bidang Pendidikan LPDP) tidak memiliki penamaan serupa di Panduan Teknis, sehingga tidak menimbulkan pertanyaan yang sama.
+    </div>
+
+    <div class="track-grid" style="margin-top:22px;">
       <div class="track-card">
         <h3>Hilirisasi Riset <u>Prioritas</u></h3>
-        <div class="src">Sumber dana: BOPTN Penelitian</div>
+        <div class="src">Sumber dana: BOPTN Penelitian (perlu verifikasi status PTS, lihat catatan di atas)</div>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Luaran</th><th>Plafon SBK</th></tr></thead>
@@ -918,7 +1030,7 @@
             </tbody>
           </table>
         </div>
-        <p style="font-size:13.5px;color:var(--ink-soft);"><b>Plafon total per tahun: Rp 1,2 miliar per usulan.</b> Honorarium tim maksimum 25% dari total RAB — Ketua Rp3.600.000/OB, Anggota Rp2.400.000/OB, Pembantu Rp25.000/OJ, Tenaga Administrasi Rp820.000/OB (Kepmendiktisaintek No. 87/M/KEP/2026).</p>
+        <p style="font-size:13.5px;color:var(--ink-soft);"><b>Plafon total per tahun: Rp 1,2 miliar per usulan.</b> Honorarium tim maksimum 25% dari total RAB. Ketua Rp3.600.000/OB, Anggota Rp2.400.000/OB, Pembantu Rp25.000/OJ, Tenaga Administrasi Rp820.000/OB (Kepmendiktisaintek No. 87/M/KEP/2026).</p>
         <ul class="no-list">
           <li>Tidak boleh untuk: beli tanah, kendaraan, bangunan/gedung baru, peralatan yang jadi aset, pulsa/paket internet, jaminan/pinjaman, hibah tunai ke pihak lain.</li>
         </ul>
@@ -926,7 +1038,7 @@
 
       <div class="track-card">
         <h3>Hilirisasi Riset <u>Strategis</u></h3>
-        <div class="src">Sumber dana: Dana Abadi Bidang Pendidikan — LPDP</div>
+        <div class="src">Sumber dana: Dana Abadi Bidang Pendidikan, LPDP</div>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Komponen</th><th>Batas</th></tr></thead>
@@ -938,21 +1050,21 @@
           </table>
         </div>
         <p style="font-size:13.5px;color:var(--ink-soft);">Honorarium tertinggi: Ketua Rp3.600.000/bln, Anggota Rp2.400.000/bln, Asisten Rp1.500.000/bln, Administrator Rp820.000/bln. Anggota yang sedang terima gaji/honor LPDP dari skema lain tidak boleh dobel honor di sini.</p>
-        <div class="isi-block" style="margin:0 0 14px;padding:10px 14px;font-size:13px;"><b>Beda dari BOPTN:</b> skema Strategis <b>boleh</b> membeli alat produksi/mesin — bukan cuma sewa.</div>
+        <div class="isi-block" style="margin:0 0 14px;padding:10px 14px;font-size:13px;"><b>Beda dari BOPTN:</b> skema Strategis boleh membeli alat produksi/mesin, bukan cuma sewa.</div>
         <ul class="no-list">
           <li>Tidak boleh untuk: beli lahan, kendaraan operasional, bangunan/kantor, jaminan/pinjaman, hibah tunai, pulsa/alat komunikasi.</li>
-          <li>Perjalanan luar negeri didanai maks. 1×/tahun — khusus seminar/konferensi terkait luaran yang sudah terdaftar HKI atau publikasi yang disetujui LPDP.</li>
+          <li>Perjalanan luar negeri didanai maksimal 1 kali per tahun, khusus seminar/konferensi terkait luaran yang sudah terdaftar HKI atau publikasi yang disetujui LPDP.</li>
         </ul>
       </div>
     </div>
 
-    <div class="isi-block"><b>ISI:</b> Tommy — untuk mempermudah dosen, apakah RTT sudah tahu produk mana yang masuk jalur Prioritas vs Strategis? Kalau ada daftarnya, sebaiknya ditautkan di sini supaya dosen tidak perlu menebak.</div>
+    <div class="isi-block"><b>Perlu dilengkapi:</b> RTT belum memetakan produk mana yang masuk jalur Prioritas versus Strategis secara spesifik, karena penentuan ini baru terjadi setelah Pra-Studi Kelayakan. Kalau daftarnya sudah ada nanti, sebaiknya ditautkan di sini.</div>
 
     <div class="scope-box on-white" style="margin-top:22px;">
-      <h3>Kontribusi mitra (wajib, bukan opsional)</h3>
+      <h3>Kontribusi mitra (wajib di tahap ini, bukan sekarang)</h3>
       <ul>
         <li><b>Mitra Pemerintah:</b> kontribusi natura dan/atau tunai minimum 50% dari usulan ke DHK.</li>
-        <li><b>Mitra DUDI, tahun ke-1:</b> total kontribusi (natura + tunai) minimum 50% dari usulan, dengan nilai tunai minimum 10% dari total kontribusi mitra.</li>
+        <li><b>Mitra DUDI, tahun ke-1:</b> total kontribusi (natura dan tunai) minimum 50% dari usulan, dengan nilai tunai minimum 10% dari total kontribusi mitra.</li>
         <li><b>Mitra DUDI, tahun ke-2:</b> total kontribusi minimum 50% dari usulan, dengan nilai tunai minimum 20% dari total kontribusi mitra.</li>
       </ul>
     </div>
@@ -963,7 +1075,9 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Luaran Wajib</div>
+      <span class="later-flag">Target di tahap penelitian lanjutan, bukan di usulan sekarang</span>
       <h2>Target luaran berdasarkan jenis mitra</h2>
+      <p>Ini target yang harus dicapai kalau produk Anda sudah didanai untuk penelitian lanjutan, bukan sesuatu yang perlu dijanjikan di usulan produk sekarang.</p>
     </div>
     <div class="table-wrap">
       <table>
@@ -981,13 +1095,13 @@
     <div class="isi-block" style="margin-top:0;background:#fff;border:1px solid var(--line);color:var(--ink-soft);"><b style="color:var(--ink);">Catatan:</b> Luaran Model dan Purwarupa tidak dapat dipilih berulang di tahun yang sama atau dua kali berturut-turut. Peneliti wajib mencantumkan Kementerian Pendidikan Tinggi, Sains, dan Teknologi sebagai pemberi dana pada setiap publikasi/luaran.</div>
 
     <div class="scope-box" style="margin-top:22px;">
-      <h3>Kalau luaran Anda "Model Bisnis" — 4 aspek wajib ada</h3>
+      <h3>Kalau luaran Anda "Model Bisnis", 4 aspek wajib ada</h3>
       <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Panduan Teknis 2026, Bab IV.A.3.</p>
       <ul>
-        <li><b>Pemasaran</b> — surat kerja sama dengan mitra/offtaker.</li>
-        <li><b>Operasional</b> — skema produksi, SDM, infrastruktur, desain teknis final, data uji lanjutan.</li>
-        <li><b>Keuangan</b> — proyeksi laporan keuangan, skema investasi, ROI, skema bagi hasil dengan mitra.</li>
-        <li><b>Sosial &amp; lingkungan</b> — dampak sosial/lingkungan, risiko &amp; mitigasi, kesesuaian regulasi.</li>
+        <li><b>Pemasaran</b>, surat kerja sama dengan mitra/offtaker.</li>
+        <li><b>Operasional</b>, skema produksi, SDM, infrastruktur, desain teknis final, data uji lanjutan.</li>
+        <li><b>Keuangan</b>, proyeksi laporan keuangan, skema investasi, ROI, skema bagi hasil dengan mitra.</li>
+        <li><b>Sosial dan lingkungan</b>, dampak sosial/lingkungan, risiko dan mitigasi, kesesuaian regulasi.</li>
       </ul>
     </div>
   </div>
@@ -997,29 +1111,35 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Pelaporan &amp; Monev</div>
+      <span class="later-flag">Kewajiban di tahap penelitian lanjutan</span>
       <h2>Kewajiban Anda setelah pendanaan turun</h2>
-      <p>Berlaku untuk semua klaster — bukan cuma Task Force.</p>
+      <p>Berlaku untuk semua klaster, bukan cuma Task Force. Ini juga bukan kewajiban di tahap usulan produk sekarang.</p>
+    </div>
+
+    <div class="scope-box on-white" style="margin-bottom:18px;">
+      <h3>Sebelum itu: pelaporan selama Pra-Studi Kelayakan</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Selama Pra-Studi Kelayakan, Laporan Kemajuan (Lampiran 5) dan Laporan Akhir (Lampiran 6) disusun oleh Tim Pakar, bukan oleh Anda. Anda tetap dilibatkan aktif dalam prosesnya, termasuk diskusi dan Focus Group Discussion bersama calon mitra, tapi penyusunan laporan formalnya menjadi tanggung jawab Tim Pakar.</p>
     </div>
 
     <div class="cards" style="grid-template-columns:repeat(3,1fr);">
       <div class="card">
         <div class="num">Wajib</div>
         <h3>Laporan Kemajuan &amp; Akhir</h3>
-        <p>Laporan Kemajuan (Lampiran 10) selama penelitian, Laporan Akhir (Lampiran 11) setelahnya. Keduanya wajib, bukan opsional.</p>
+        <p>Laporan Kemajuan (Lampiran 10) selama penelitian lanjutan, Laporan Akhir (Lampiran 11) setelahnya. Keduanya wajib, bukan opsional.</p>
       </div>
       <div class="card">
-        <div class="num">2×/tahun</div>
+        <div class="num">2x/tahun</div>
         <h3>Validasi Luaran oleh DHK</h3>
         <p>Tim wajib update bukti luaran lewat sistem HILIRISET. Submission ditutup sementara selama periode validasi berjalan.</p>
       </div>
       <div class="card">
         <div class="num">Semua klaster</div>
         <h3>Monev tahap 2</h3>
-        <p>Berlaku untuk semua klaster — Task Force mendapat monev tambahan di awal (lihat <a href="#cakupan">Jalur Layak / Task Force</a>), bukan pengganti monev reguler ini.</p>
+        <p>Berlaku untuk semua klaster. Task Force mendapat monev tambahan di awal (lihat <a href="#cakupan">Setelah Terpilih</a>), bukan pengganti monev reguler ini.</p>
       </div>
     </div>
 
-    <div class="isi-block warn-block"><b>Kemungkinan definisi (perlu konfirmasi):</b> Laporan Akhir wajib memuat kontribusi terhadap "8 Industri Strategis" — istilah ini disebut di Lampiran 11 tapi tidak dijelaskan di Panduan Teknis 2026 itu sendiri. Kemdiktisaintek secara terpisah menyebut 8 sektor ini sebagai: Kesehatan, Ketahanan Pangan, Digitalisasi (AI &amp; semikonduktor), Hilirisasi &amp; Industrialisasi, Energi, Material Maju &amp; Manufaktur, Maritim, dan Pertahanan. <b>ISI:</b> Tommy, mohon dikonfirmasi ke DHK bahwa daftar ini sama dengan yang dimaksud Lampiran 11, sebelum disampaikan ke dosen sebagai definisi resmi.</div>
+    <div class="isi-block warn-block"><b>Perlu dikonfirmasi:</b> Laporan Akhir tahap penelitian lanjutan wajib memuat kontribusi terhadap "8 Industri Strategis". Istilah ini disebut di Lampiran 11 tapi tidak dijelaskan di Panduan Teknis 2026. Kemungkinan definisinya ada di dokumen kebijakan lain. RTT perlu mengonfirmasi ke DHK sebelum poin ini disampaikan ke dosen sebagai definisi resmi.</div>
   </div>
 </section>
 
@@ -1027,63 +1147,69 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Cek Kelayakan</div>
-      <h2>Cuma ±60 detik — cek kesiapan Anda sebagai ketua tim</h2>
-      <p>Berdasarkan persyaratan Ketua Tim Peneliti pada Bab III.H Panduan Teknis 2026.</p>
+      <h2>Sekitar 60 detik, cek kesiapan Anda untuk usulan sekarang</h2>
+      <p>Berdasarkan kriteria produk dan syarat Ketua Peneliti pada Bab III.A.3-4 Panduan Teknis 2026, untuk tahap usulan produk atau teknologi (bukan tahap proposal lanjutan).</p>
     </div>
     <div class="checker" id="checker">
 
       <div class="q" data-q="1">
-        <div class="q-text">1. Produk Anda mendapat rekomendasi <b>Layak</b> dari Pra-Studi Kelayakan?</div>
+        <div class="q-text">1. TKT produk Anda berada di rentang <b>6-8</b> (bukan di bawah 6, bukan sudah 9)?</div>
         <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Anda belum berada di tahap ini. Hubungi RTT untuk mengecek status Pra-Studi Kelayakan produk Anda — mungkin masih dalam proses kajian atau berstatus Task Force yang perlu ditindaklanjuti dulu.</div>
+        <div class="q-remedy">Jika TKT di bawah 6, produk lebih tepat lanjut riset dasar/lanjutan lewat skema DPPM, bukan Dorongan Teknologi. Jika TKT 9, produk sudah siap pasar, hubungi RTT untuk jalur komersialisasi langsung, bukan skema pendanaan ini.</div>
       </div>
 
       <div class="q" data-q="2">
-        <div class="q-text">2. TKT produk Anda berada di rentang <b>6–8</b> (bukan di bawah 6, bukan sudah 9)?</div>
+        <div class="q-text">2. Produk sudah melalui validasi teknis (internal dan/atau eksternal), dengan bukti performa dan stabilitas, dan siap diuji secara teknis di lapangan?</div>
         <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Jika TKT &lt; 6: produk lebih tepat lanjut riset dasar/lanjutan lewat skema DPPM, bukan Dorongan Teknologi. Jika TKT 9: produk sudah siap pasar — hubungi RTT untuk jalur komersialisasi langsung, bukan skema pendanaan ini.</div>
+        <div class="q-remedy">Validasi teknis adalah syarat wajib. Kalau belum ada bukti performa dan stabilitas yang cukup, produk kemungkinan belum siap diusulkan tahun ini.</div>
       </div>
 
       <div class="q" data-q="3">
-        <div class="q-text">3. Anda dosen aktif di PDDIKTI — tidak sedang tugas belajar, izin belajar, atau recharging?</div>
+        <div class="q-text">3. Produk punya target pengguna dan potensi hilirisasi yang jelas, serta nilai tambah dibanding solusi yang sudah ada?</div>
         <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Ketua tim wajib berstatus aktif di PDDIKTI. Jika Anda sedang tidak aktif, pengajuan perlu memakai ketua pengganti — koordinasikan dengan RTT dan program studi.</div>
+        <div class="q-remedy">Kejelasan masalah, target pengguna, dan nilai tambah adalah bagian dari penilaian potensi hilirisasi. Perkuat bagian Aspek Pasar di Lampiran 1 sebelum submit.</div>
       </div>
 
       <div class="q" data-q="4">
-        <div class="q-text">4. Pendidikan Anda S3, <u>atau</u> S2 dengan jabatan fungsional minimal Lektor?</div>
-        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Anda belum memenuhi syarat sebagai Ketua Tim Peneliti. Pertimbangkan mengajukan sebagai anggota, atau cari rekan setim yang memenuhi syarat pendidikan/jafung sebagai ketua.</div>
+        <div class="q-text">4. Produk Anda <u>belum</u> memiliki mitra hilirisasi resmi (DUDI atau pemerintah)?</div>
+        <div class="q-btns"><button class="q-btn yes">Ya, belum ada</button><button class="q-btn no">Sudah ada mitra</button></div>
+        <div class="q-remedy">Ini justru syarat resmi skema Dorongan Teknologi: produk yang diusulkan harus belum punya mitra hilirisasi. Kalau produk Anda sudah terikat mitra resmi, skema yang lebih sesuai kemungkinan Ajakan Industri atau SINERGI. Lihat <a href="#faq-mitra">FAQ soal mitra</a> di bawah.</div>
       </div>
 
       <div class="q" data-q="5">
-        <div class="q-text">5. Anda pemilik sah/pengembang utama produk, dan tidak akan pindah homebase selama penelitian?</div>
+        <div class="q-text">5. Riset ini orisinal dari tim dosen/peneliti Anda sendiri, dan bisa dibuktikan lewat surat pernyataan (Lampiran 2)?</div>
         <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Ketua harus pemilik sah/pengembang utama produk yang dikaji, dan berkomitmen tidak pindah homebase selama pelaksanaan. Jika ada perubahan kepemilikan atau rencana pindah, diskusikan dengan RTT sebelum submit.</div>
+        <div class="q-remedy">Orisinalitas riset wajib dibuktikan lewat Surat Pernyataan Orisinalitas. Pastikan tidak ada pelanggaran hak kekayaan intelektual pihak lain sebelum submit.</div>
       </div>
 
       <div class="q" data-q="6">
-        <div class="q-text">6. Punya minimal 2 penelitian relevan + 2 artikel jurnal internasional bereputasi (penulis pertama) — <u>atau</u> 2 KI relevan selain Hak Cipta — <u>atau</u> kombinasi 1 artikel + 1 KI?</div>
-        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Rekam jejak ini wajib untuk Ketua Tim. Jika belum terpenuhi, pertimbangkan menjadikan kolega dengan rekam jejak yang sesuai sebagai ketua, dengan Anda sebagai anggota.</div>
+        <div class="q-text">6. Produk ini <u>tidak</u> sedang atau akan diusulkan ke skema pendanaan lain, baik di Kemdiktisaintek maupun sumber lain, secara bersamaan?</div>
+        <div class="q-btns"><button class="q-btn yes">Betul, tidak</button><button class="q-btn no">Sedang/akan diusulkan ke tempat lain</button></div>
+        <div class="q-remedy">Double funding tidak diperbolehkan. Kalau produk sedang diusulkan ke skema lain, pilih salah satu sebelum submit ke Dorongan Teknologi.</div>
       </div>
 
       <div class="q" data-q="7">
-        <div class="q-text">7. Sudah punya mitra yang memenuhi syarat — instansi pemerintah minimal setingkat Dinas Kabupaten/Kota, atau DUDI berbadan hukum dengan NIB (skala minimal mikro)?</div>
+        <div class="q-text">7. Anda dosen aktif di PDDIKTI, tidak sedang tugas belajar, izin belajar, atau recharging?</div>
         <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
-        <div class="q-remedy">Tanpa mitra, proposal penuh belum bisa diajukan — tapi ini bukan jalan buntu. Lihat <a href="#faq-mitra">FAQ: belum punya mitra, gimana?</a> di bawah untuk langkah selanjutnya.</div>
+        <div class="q-remedy">Ketua Peneliti wajib berstatus aktif di PDDIKTI. Jika Anda sedang tidak aktif, koordinasikan dengan RTT dan program studi soal siapa yang bisa menjadi ketua.</div>
       </div>
 
       <div class="q" data-q="8">
-        <div class="q-text">8. Anda <u>belum</u> menjadi ketua di judul lain pada skema SINERGI, Ajakan Industri, atau Dorongan Teknologi tahun pendanaan yang sama?</div>
-        <div class="q-btns"><button class="q-btn yes">Ya, belum</button><button class="q-btn no">Sudah jadi ketua di judul lain</button></div>
-        <div class="q-remedy">Kuota dasar: 1 judul ketua + 1 anggota. Kuota bisa lebih besar kalau rekam jejak Anda kuat — lihat syaratnya di <a href="#tim">Tim &amp; Mitra</a> sebelum mengajukan judul baru sebagai ketua.</div>
+        <div class="q-text">8. Pendidikan Anda S3, <u>atau</u> S2 dengan jabatan fungsional minimal Lektor?</div>
+        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
+        <div class="q-remedy">Anda belum memenuhi syarat pendidikan/jabatan fungsional sebagai Ketua Peneliti. Pertimbangkan mencari rekan yang memenuhi syarat untuk menjadi ketua pengusul.</div>
       </div>
 
       <div class="q" data-q="9">
-        <div class="q-text">9. Utang luaran Anda (kewajiban luaran penelitian sebelumnya yang belum tuntas) berjumlah 2 atau kurang?</div>
-        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Lebih dari 2</button></div>
-        <div class="q-remedy">Ketua dengan lebih dari 2 utang luaran tidak boleh mengajukan penelitian baru. Tuntaskan dulu kewajiban luaran lama sebelum submit proposal ini.</div>
+        <div class="q-text">9. Anda pemilik sah atau pengembang utama produk ini, dan tidak berencana pindah homebase selama pelaksanaan program?</div>
+        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
+        <div class="q-remedy">Ketua harus pemilik sah atau pengembang utama produk yang diusulkan, dan berkomitmen tidak pindah homebase. Jika ada perubahan kepemilikan atau rencana pindah, diskusikan dengan RTT sebelum submit.</div>
+      </div>
+
+      <div class="q" data-q="10">
+        <div class="q-text">10. Punya minimal 2 penelitian relevan dan 2 artikel jurnal internasional bereputasi sebagai penulis pertama, <u>atau</u> 2 KI relevan selain Hak Cipta, <u>atau</u> kombinasi 1 artikel dan 1 KI?</div>
+        <div class="q-btns"><button class="q-btn yes">Ya</button><button class="q-btn no">Belum</button></div>
+        <div class="q-remedy">Rekam jejak ini wajib untuk Ketua Peneliti. Jika belum terpenuhi, pertimbangkan menjadikan kolega dengan rekam jejak yang sesuai sebagai ketua pengusul.</div>
       </div>
 
       <div class="checker-result result-pending" id="checker-result">Jawab semua pertanyaan di atas untuk melihat hasil.</div>
@@ -1099,39 +1225,49 @@
     </div>
     <div id="faq-list">
 
-      <div class="faq-item">
-        <button class="faq-q">Bedanya halaman ini dengan pengajuan produk/komoditas awal? <span class="plus">+</span></button>
-        <div class="faq-a">Halaman ini <b>bukan</b> untuk mengusulkan produk baru ke kurasi Kemdiktisaintek. Itu adalah tahap paling awal (Penerimaan Usulan Produk atau Teknologi) yang sudah lewat untuk produk yang kini berstatus Layak. Halaman ini untuk tahap <b>setelahnya</b> — menyusun proposal penelitian lanjutan (Lampiran 7) untuk produk yang sudah direkomendasikan Layak dari Pra-Studi Kelayakan.</div>
+      <div class="faq-item" id="faq-mitra">
+        <button class="faq-q">Kenapa saya harus belum punya mitra? Bukannya mitra memperkuat usulan? <span class="plus">+</span></button>
+        <div class="faq-a">Ini justru poin pembeda skema Dorongan Teknologi. Produk yang diusulkan harus <b>belum</b> memiliki mitra hilirisasi (Panduan Teknis 2026, Bab III.A.3.f). Produk yang masih di "valley of death" tanpa mitra adalah target utama program ini. Selama Pra-Studi Kelayakan nanti, Tim Pakar bertugas sebagai katalis, mempertemukan Anda dengan calon mitra lewat Business Matching (FGD). Mitra resmi baru menjadi syarat wajib di tahap proposal penelitian lanjutan (Lampiran 7), bukan di tahap usulan sekarang. Kalau produk Anda sudah terikat mitra resmi sejak awal, skema yang lebih sesuai kemungkinan Ajakan Industri atau SINERGI, koordinasikan dengan RTT.</div>
       </div>
 
-      <div class="faq-item" id="faq-mitra">
-        <button class="faq-q">Saya belum punya mitra, gimana? <span class="plus">+</span></button>
-        <div class="faq-a">Normal di tahap awal — sebelum Pra-Studi Kelayakan, belum punya mitra memang wajar. Produk yang masih di "valley of death" tanpa mitra justru target utama program ini, dan selama Pra-Studi Kelayakan, Tim Pakar bertugas sebagai <b>katalis</b>: mempertemukan Anda dengan calon mitra lewat Business Matching (FGD). Mitra baru wajib ada begitu masuk ke tahap proposal penuh (halaman ini). Kalau sampai akhir Pra-Studi Kelayakan masih belum ada mitra, produk masuk <b>Klaster Tidak Didanai</b> — meski TKT dan aspek lain sudah oke. Ini bukan penolakan permanen: Anda bisa dapat rekomendasi reposisi (lanjut riset via DPPM, naikkan TKT, dst.) atau <i>controlled pause</i> dengan evaluasi ulang dalam 3 tahun kalau konteksnya berubah.</div>
+      <div class="faq-item">
+        <button class="faq-q">Apa yang terjadi setelah saya submit usulan produk? <span class="plus">+</span></button>
+        <div class="faq-a">Direktorat Hilirisasi dan Kemitraan (DHK) menyeleksi usulan yang masuk, perkiraan minggu ke-2 Agustus 2026. Produk terpilih masuk "etalase" dan dikaji oleh Tim Pakar lewat Pra-Studi Kelayakan (September-Desember 2026), yang berakhir dengan status Layak atau Tidak Didanai sekitar Januari-Februari 2027. Kalau Layak, tahap berikutnya adalah menyusun proposal penelitian lanjutan (Lampiran 7) bersama mitra. Lihat <a href="#timeline">Timeline Lengkap</a> untuk rinciannya.</div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q">19 Juli 2026 itu deadline apa persisnya? <span class="plus">+</span></button>
-        <div class="faq-a">19 Juli 2026, 23:59 WIB adalah batas akhir <b>Kemdiktisaintek</b> untuk mengunggah proposal lengkap ke sistem HILIRISET — sumber: poster resmi Hiliriset/Ditjen Risbang. Panduan Teknis 2026 sendiri tidak mencantumkan tanggal kalender spesifik untuk tahap ini, sehingga tanggal ini kami ambil dari pengumuman resmi terpisah. <b>RTT menetapkan batas internal 16 Juli 2026</b> untuk cek substansi dan konsultasi — kirim draft Anda sebelum tanggal ini, bukan mepet ke 19 Juli, supaya masih sempat direview dan disetujui pimpinan.</div>
+        <div class="faq-a">19 Juli 2026, 23:59 WIB adalah batas mengunggah Usulan Produk atau Teknologi (Lampiran 1 dan 2) ke sistem HILIRISET, menurut poster resmi Hiliriset/Ditjen Risbang. Panduan Teknis 2026 sendiri tidak mencantumkan tanggal kalender spesifik untuk tahap ini, hanya menyebut "minggu ke-2 Juli" sebagai periode sosialisasi dan penerimaan usulan. RTT menetapkan batas internal 16 Juli 2026 untuk cek substansi dan konsultasi. Kirim draft Anda sebelum tanggal ini, bukan mepet ke 19 Juli, supaya masih sempat direview dan disetujui pimpinan.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q">Bagaimana saya tahu produk saya masuk jalur Prioritas atau Strategis? <span class="plus">+</span></button>
-        <div class="faq-a">Jalur pendanaan (Prioritas/BOPTN vs Strategis/Dana Abadi LPDP) ditentukan oleh rekomendasi DHK saat proses Pra-Studi Kelayakan, bukan pilihan bebas dosen. Jika Anda tidak yakin, cek ke RTT atau lihat surat/notifikasi hasil Pra-Studi Kelayakan Anda di sistem HILIRISET.</div>
+        <button class="faq-q">Apakah saya perlu menyiapkan RAB (anggaran) sekarang? <span class="plus">+</span></button>
+        <div class="faq-a">Tidak. Lampiran 1 (dokumen yang Anda unggah sekarang) tidak memuat komponen anggaran. RAB baru disusun di tahap proposal penelitian lanjutan (Lampiran 7), setelah produk Anda dinyatakan Layak dari Pra-Studi Kelayakan.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q">TKT produk saya di luar rentang 6–8, apa artinya? <span class="plus">+</span></button>
-        <div class="faq-a">Menurut Panduan Teknis 2026, produk dengan TKT di bawah 6 dianggap belum matang untuk skema Dorongan Teknologi dan lebih tepat melanjutkan riset lewat pendanaan DPPM atau sumber lain. Produk dengan TKT 9 dianggap sudah siap pasar/dikomersialkan — pendanaan Dorongan Teknologi tidak lagi relevan, meski hasil Pra-Studi Kelayakan tetap bernilai sebagai validasi independen.</div>
+        <button class="faq-q">Apakah BINUS, sebagai PTS, eligible untuk skema ini? <span class="plus">+</span></button>
+        <div class="faq-a">Belum sepenuhnya jelas dan perlu diverifikasi ke DHK/Kemdiktisaintek. Panduan Teknis 2026 menyebut sumber dana jalur Prioritas sebagai "Bantuan Operasional Perguruan Tinggi Negeri (BOPTN) Penelitian", yang secara historis dan dari namanya ditujukan untuk PTN. Dokumen ini tidak secara eksplisit menyatakan status PTS, baik sebagai pengecualian maupun sebagai pihak yang diizinkan. Jalur Strategis (Dana Abadi Bidang Pendidikan LPDP) tidak memiliki penamaan serupa. RTT sedang mendalami hal ini, tanyakan status terbaru sebelum menginvestasikan banyak waktu menyusun usulan.</div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q">Apa bedanya Jalur Layak dan Task Force, dan kenapa formatnya beda? <span class="plus">+</span></button>
-        <div class="faq-a">Jalur Layak (Tipe 1) berarti semua aspek sudah dinyatakan layak — fokus proposal pada eksekusi dan scale-up. Task Force (Tipe 2) berarti masih ada satu hambatan kritis (bottleneck) di aspek teknis atau pasar yang perlu diselesaikan dulu — proposal Task Force wajib memuat bagian khusus yang menjelaskan bottleneck tersebut dan rencana penyelesaiannya, dan akan melalui monev tambahan 2 bulan setelah pendanaan ditetapkan.</div>
+        <button class="faq-q">Bagaimana saya tahu produk saya nanti masuk jalur Prioritas atau Strategis? <span class="plus">+</span></button>
+        <div class="faq-a">Jalur pendanaan (Prioritas/BOPTN atau Strategis/Dana Abadi LPDP) ditentukan oleh rekomendasi DHK saat Pra-Studi Kelayakan, bukan pilihan bebas dosen, dan belum ditentukan di tahap usulan sekarang. Kalau Anda tidak yakin nanti, cek ke RTT atau lihat surat/notifikasi hasil Pra-Studi Kelayakan Anda di sistem HILIRISET.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">TKT produk saya di luar rentang 6-8, apa artinya? <span class="plus">+</span></button>
+        <div class="faq-a">Menurut Panduan Teknis 2026, produk dengan TKT di bawah 6 dianggap belum matang untuk skema Dorongan Teknologi dan lebih tepat melanjutkan riset lewat pendanaan DPPM atau sumber lain. Produk dengan TKT 9 dianggap sudah siap pasar atau dikomersialkan, pendanaan Dorongan Teknologi tidak lagi relevan.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Apa bedanya Jalur Layak dan Task Force nanti, dan kenapa formatnya beda? <span class="plus">+</span></button>
+        <div class="faq-a">Ini terjadi setelah Pra-Studi Kelayakan, bukan sesuatu yang perlu dipikirkan sekarang. Jalur Layak (Tipe 1) berarti semua aspek sudah dinyatakan layak, fokus proposal lanjutan pada eksekusi dan scale-up. Task Force (Tipe 2) berarti masih ada satu hambatan kritis (bottleneck) di aspek teknis atau pasar yang perlu diselesaikan dulu. Proposal Task Force wajib memuat bagian khusus yang menjelaskan bottleneck tersebut dan rencana penyelesaiannya, dan akan melalui monev tambahan 2 bulan setelah pendanaan ditetapkan.</div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q">Halaman ini resmi dari Kemdiktisaintek? <span class="plus">+</span></button>
-        <div class="faq-a">Bukan. Ini adalah materi bantu internal yang disusun BINUS RTT berdasarkan Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis – Dorongan Teknologi Tahun 2026 (Direktorat Jenderal Riset dan Pengembangan, Kemdiktisaintek) dan pengumuman resmi terkait tenggat waktu. Jika ada perbedaan antara halaman ini dan dokumen resmi Kemdiktisaintek atau sistem HILIRISET, dokumen resmi yang berlaku.</div>
+        <div class="faq-a">Bukan. Ini adalah materi bantu internal yang disusun BINUS RTT berdasarkan Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis - Dorongan Teknologi Tahun 2026 (Direktorat Jenderal Riset dan Pengembangan, Kemdiktisaintek), slide linimasa resmi dari sesi sosialisasi, dan pengumuman terpisah terkait tenggat waktu. Jika ada perbedaan antara halaman ini dan dokumen resmi Kemdiktisaintek atau sistem HILIRISET, dokumen resmi dan sistem HILIRISET yang berlaku.</div>
       </div>
 
     </div>
@@ -1143,12 +1279,12 @@
     <div class="footgrid">
       <div>
         <h4>BINUS Research &amp; Technology Transfer</h4>
-        <p>Materi ini bukan halaman resmi Kemdiktisaintek. Jika ada perbedaan dengan dokumen resmi (Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis – Dorongan Teknologi Tahun 2026) atau sistem HILIRISET, dokumen resmi dan sistem HILIRISET yang berlaku.</p>
-        <p class="src-note" style="color:#69789F;">Sumber utama: Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis – Dorongan Teknologi Tahun 2026, Direktorat Jenderal Riset dan Pengembangan, Kementerian Pendidikan Tinggi, Sains, dan Teknologi.</p>
+        <p>Materi ini bukan halaman resmi Kemdiktisaintek dan berfokus pada tahap Penerimaan Usulan Produk atau Teknologi (Lampiran 1 dan 2). Jika ada perbedaan dengan dokumen resmi (Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis - Dorongan Teknologi Tahun 2026) atau sistem HILIRISET, dokumen resmi dan sistem HILIRISET yang berlaku.</p>
+        <p class="src-note" style="color:#69789F;">Sumber utama: Panduan Teknis Program Hilirisasi Riset Prioritas dan Strategis - Dorongan Teknologi Tahun 2026, Direktorat Jenderal Riset dan Pengembangan, Kementerian Pendidikan Tinggi, Sains, dan Teknologi. Tanggal pada bagian Timeline mengacu pada slide linimasa resmi dari sesi sosialisasi, bukan dari dokumen Panduan Teknis tertulis.</p>
       </div>
       <div>
         <h4>Kontak</h4>
-        <p>Tommy Prayoga — Downstreaming Section Head, RTT</p>
+        <p>Tommy Prayoga, Downstreaming Section Head, RTT</p>
         <p>Email: <a href="mailto:tommy.prayoga@binus.edu">tommy.prayoga@binus.edu</a></p>
         <p>WhatsApp/Telp: <a href="tel:+6281277657773">0812-7765-7773</a></p>
       </div>
@@ -1158,7 +1294,7 @@
         <p><a href="https://hiliriset.kemdiktisaintek.go.id/guide/dorongan-teknologi" target="_blank" rel="noopener">Unduh Panduan Teknis 2026 (PDF) ↗</a></p>
       </div>
     </div>
-    <div class="disclaimer">© 2026 BINUS Research &amp; Technology Transfer. Materi internal — bukan untuk disebarluaskan ke luar BINUS.</div>
+    <div class="disclaimer">© 2026 BINUS Research &amp; Technology Transfer. Materi internal, bukan untuk disebarluaskan ke luar BINUS.</div>
   </div>
 </footer>
 
@@ -1237,10 +1373,10 @@
     var allYes = Object.keys(answers).every(function(k){ return answers[k] === true; });
     if(allYes){
       resultEl.className = 'checker-result result-ready';
-      resultEl.textContent = '✓ Secara garis besar Anda memenuhi syarat dasar sebagai Ketua Tim. Lanjutkan ke penyusunan Lampiran 7.';
+      resultEl.textContent = '✓ Secara garis besar Anda memenuhi syarat dasar untuk mengusulkan produk sekarang. Lanjutkan ke penyusunan Lampiran 1 dan 2.';
     } else {
       resultEl.className = 'checker-result result-notready';
-      resultEl.textContent = '✗ Ada syarat yang belum terpenuhi — baca catatan merah di atas sebelum melanjutkan.';
+      resultEl.textContent = '✗ Ada syarat yang belum terpenuhi, baca catatan merah di atas sebelum melanjutkan.';
     }
   }
 
